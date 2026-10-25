@@ -10,7 +10,7 @@ Here is the state of our mods and the changes planned for them.
 
 ### _v4.0.x_ (in beta, for _1.12.2_ and _1.20.1+_)
 
-Released as betas: 4.0.0-beta.1 for 1.12.2 (Forge), 4.0.0-beta.8 for 1.20.1+ (Fabric 1.20.1 and 1.21.1, NeoForge 1.21.1, Forge 1.20.1).
+Released as betas: 4.0.0-beta.2 for 1.12.2 (Forge), 4.0.0-beta.9 for 1.20.1+ (Fabric 1.20.1 and 1.21.1, NeoForge 1.21.1, Forge 1.20.1).
 See the [full 4.0.0 changelog](/changelog/4.0.0/).
 
 - _Add_: 1.20.1 and 1.21.1 versions (Fabric, NeoForge 1.21.1, Forge 1.20.1), with OMPD's blocks included and without OMLib (**done**)
@@ -21,7 +21,7 @@ See the [full 4.0.0 changelog](/changelog/4.0.0/).
 - _Add_: Turret API for other mods (**done**)
 - _Add_: Melee, Crossbow, Arc and Plasma Turrets (**done**)
 - _Add_: Jade, Sable and Create compatibility on 1.20.1+ (**done**)
-- _Add_: claiming unowned blocks and an Ownership Wand for mapmakers on 1.20.1+ (**done**, next pre-release)
+- _Add_: claiming unowned blocks, disowning bases and an Ownership Wand for mapmakers (**done**)
 - _Change_: new targeting and aiming system for turrets (**done**)
 - _Change_: Relativistic Turret becomes the Slowing Turret (**done**)
 - _Remove_: inventory and power expanders, loot deleter addon (**done**)
@@ -64,6 +64,7 @@ On 1.20.1+, Open Modular Turrets does not need OMLib.
 
 - _Add_: camouflage menu with disguise slot and light sliders (**done**)
 - _Add_: memory card rules shared by turret bases and camouflage traps (**done**)
+- _Add_: claiming unowned blocks and the Ownership Wand (**done**)
 - _Change_: members of the owner's scoreboard team count as trusted (**done**)
 - _Remove_: global trust lists, the unfinished network cable and the unused device network API (**done**)
 
@@ -83,17 +84,26 @@ On 1.20.1+, its blocks are part of Open Modular Turrets.
 
 - _Add_: trusted players for camouflage traps (**done**)
 - _Add_: light settings for camouflage traps (**done**)
+- _Add_: claiming unowned blocks and disowning camouflage traps (**done**)
 - _Change_: fences no longer hurt the owner's team and their pets (**done**)
 
 ### _v3.2.x_ (skipped, replaced by 4.0.x)
-
-### _v3.1.x_ (skipped, beta released)
 
 ## __OpenModularLighting__
 
 ### _v1.0.x_ (in beta, for _1.12.2_ and _1.20.1+_)
 
-Floodlights, a port of the 1.7.10 _FloodLights_ mod, for Fabric 1.20.1 and 1.21.1, NeoForge 1.21.1, Forge 1.20.1 and Forge 1.12.2 (with OMLib).
+Floodlights, a port of the 1.7.10 _FloodLights_ mod.
+Released as betas: 1.0.0-beta.7 for 1.12.2 (Forge, needs OMLib 4.0.0-beta.2 or newer), 1.0.0-beta.5 for 1.20.1+ (Fabric 1.20.1 and 1.21.1, NeoForge 1.21.1, Forge 1.20.1).
+See the [full 1.0.0 changelog](/changelog/oml-1.0.0/).
+
+- _Add_: electric, carbon (non-electric) and UV floodlights with straight, narrow cone and wide cone beams (**done**)
+- _Add_: fluorescent lights, cube light and grow light, sharing energy with their neighbours (**done**)
+- _Add_: lightproof glass that stops light and floodlight beams (**done**)
+- _Add_: disguise for floodlights (**done**; on 1.12.2 in OMLib's camouflage menu)
+- _Add_: light debug tool (**done**)
+- _Add_: Jade (1.20.1+) and Hwyla (1.12.2) support (**done**)
+- _Change_: floodlights use fewer light blocks and keep them while off (**done**)
 
 ## __OMTControl (OMT Addon)__
 

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Changelog 4.0.0
+title: OMT Changelog 4.0.0
 permalink: /changelog/4.0.0/
 ---
 
@@ -11,8 +11,8 @@ The current pre-releases are:
 
 | Minecraft | Loaders | Mods | Latest |
 | --- | --- | --- | --- |
-| 1.12.2 | Forge | OMT, OMLib, OMPD | 4.0.0-beta.1 (2026-10-24) |
-| 1.20.1+ | Fabric 1.20.1 and 1.21.1, NeoForge 1.21.1, Forge 1.20.1 | OMT (OMPD and OMLib included) | 4.0.0-beta.8 (2026-10-25) |
+| 1.12.2 | Forge | OMT, OMLib, OMPD | 4.0.0-beta.2 (2026-10-26) |
+| 1.20.1+ | Fabric 1.20.1 and 1.21.1, NeoForge 1.21.1, Forge 1.20.1 | OMT (OMPD and OMLib included) | 4.0.0-beta.9 (2026-10-25) |
 
 **How to read this page:**
 a line without a prefix is a change in both versions.
@@ -22,7 +22,7 @@ On 1.12.2, _OMLib_ or _OMPD_ after the prefix names the mod that changed; the ot
 
 ## Before you update
 
-- **1.12.2 only:** OMT and OMPD 4.0.0 require OMLib 4.0.0-beta.1 or newer
+- **1.12.2 only:** OMT and OMPD 4.0.0-beta.2 require OMLib 4.0.0-beta.2 or newer
 - **1.12.2 only:** inventory and power expanders, the loot deleter addon and _OMLib_'s network cable disappear from your world, the expanders together with the items in them; placed 3.x power generators become generators and keep their fuel
 - **1.12.2 only:** the Relativistic Turret becomes the Slowing Turret; placed turrets, items and its config section are converted
 - **1.20.1+ only:** Relativistic Turrets placed with 4.0.0-alpha.1 to 4.0.0-beta.2 disappear (renamed to Slowing Turret in beta.3); resource packs replacing its sound need the new name `openmodularturrets:slowing`
@@ -38,11 +38,11 @@ On 1.12.2, _OMLib_ or _OMPD_ after the prefix names the mod that changed; the ot
 ### Turrets
 
 - The Melee Turret has a model: its blades extend and spin while it is active
+- Holding a turret while looking at a block next to a turret base outlines where it would go: cyan if it can be placed there, red with a short reason if not (block in the way, wrong side, base tier too low, base full, too many of this turret)
 - Turret tooltips (with shift): what the turret does, the base tier it needs, its ammo and its energy per shot
 - **1.12.2 only:** turrets that ignore Scatter Shot upgrades say so in their tooltip without shift
 - **1.20.1+ only:** crafting recipes for the Melee, Crossbow, Arc and Plasma Turrets
 - **1.20.1+ only:** the Potato Cannon Turret can also fire poisonous potatoes
-- **1.20.1+ only:** holding a turret while looking at a block next to a turret base outlines where it would go: cyan if it can be placed there, red with a short reason if not (as in 1.12.2)
 
 ### Turret bases, energy and upgrades
 
@@ -51,6 +51,16 @@ On 1.12.2, _OMLib_ or _OMPD_ after the prefix names the mod that changed; the ot
 - **1.20.1+ only:** upgrade tooltips show which machine the upgrade fits into (turret base or generator)
 - **1.20.1+ only:** Creative Upgrade: fills the base's energy storage and removes the ammo usage of its turrets (placeholder texture)
 - **1.20.1+ only:** the crank plays its windup sound when it charges a tier 1 base
+
+### Ownership
+
+- Right-clicking a turret base, turret, camouflage trap or hardened block/wall/fence without an owner claims it and the unowned blocks connected to it (up to `claimSpreadLimit`, default 1024); machines' fake players only claim if `fakePlayersCanClaim` is set. On 1.12.2 these options are in _OMLib_'s config, on 1.20.1+ they are `bases.claimSpreadLimit` and `general.fakePlayersCanClaim`
+- Ownership Wand (creative, operators only) for mapmakers: right-click makes you the owner of an owned block, sneak-right-click removes its owner; it spreads to the connected blocks of the same owner unless switched off with a sneak-right-click into the air (on 1.12.2 part of _OMLib_)
+- While you hold the Ownership Wand, turrets still target and fire at you, but their shots, explosions and effects do not affect you
+- The owner of a turret base ("Disown" in its configure screen) or camouflage trap (camouflage menu) can disown it after a confirmation; the trust list is cleared and anyone can claim it
+- Turret bases, their turrets and hardened blocks/walls/fences without an owner sparkle green
+- **1.12.2 only:** WAILA/HWYLA and The One Probe show "Owner: nobody (right-click to claim)"
+- **1.20.1+ only:** Jade shows "Owner: nobody (right-click to claim)"; hardened blocks, walls and fences now show their owner in Jade
 
 ### Camouflage, trust and memory card
 
@@ -70,8 +80,9 @@ On 1.12.2, _OMLib_ or _OMPD_ after the prefix names the mod that changed; the ot
 
 ### Config
 
+- Config option `turrets.dropTurretsOverMaxSimultaneous` (default false): attached turrets over their type's `maxSimultaneous` drop, e.g. after the limit was lowered
+- **1.12.2 only:** the server sends its config values (OMT's `openmodularturrets.cfg` and `openmodularturrets_addon_turrets.cfg`, _OMLib_'s `omlib.cfg`) to clients when they join, so tooltips, ammo slots, the turret placement outline and GUIs follow the server's rules; after leaving, the client uses its own config again
 - **1.20.1+ only:** the config file is documented: every key has a comment with its description, range and default
-- **1.20.1+ only:** config option `turrets.dropTurretsOverMaxSimultaneous` (default false): attached turrets over their type's `maxSimultaneous` drop, e.g. after the limit was lowered
 
 ## Changed
 
@@ -108,23 +119,30 @@ On 1.12.2, _OMLib_ or _OMPD_ after the prefix names the mod that changed; the ot
 ### Turret bases, addons and energy
 
 - Mobs killed by turrets only drop loot if the base has a fake drops addon; each further addon adds one level of Looting
+- Only admins of a turret base can attach turrets to it (the placement outline says why otherwise)
+- Hoppers and pipes can no longer take ammo out of a turret base, so nobody can disarm someone else's base with them
+- Turret bases without an owner (e.g. placed by a machine or a structure) no longer drop themselves; they stay inert until claimed, unless `bases.unownedBasesActive` is set
+- Turrets can be attached to a turret base without an owner only by players who may use command blocks (operators, mapmakers; on 1.12.2 operators in creative mode)
+- **1.12.2 only:** a broken turret base scatters its items like a chest
 - **1.12.2 only:** the Recycler addon saves ammo with the configured chance (it saved about 1 % of shots whatever the config said)
 - **1.12.2 only:** the Solar Panel addon charges a base once per tick instead of once per tick for every turret on it
 - **1.12.2 only:** turret bases no longer give their energy to other blocks
 - **1.12.2 only** · _OMLib_: stored energy above a lowered capacity is cut off
+- **1.12.2 only** · _OMLib_: owned blocks without an owner no longer count as owned by a placeholder player; they stay unowned until someone claims them
 
 ### Camouflage and passive defense
 
 - Right-clicking a turret base or camouflage trap with a block no longer camouflages it; the camouflage menu does it now
+- Hardened blocks can be used as camouflage (other blocks with a tile/block entity still cannot)
 - **1.12.2 only** · _OMPD_: the camouflage trap blocks light like a solid block by default
 - **1.12.2 only** · _OMPD_: fences no longer hurt the owner's team and their pets
-- **1.20.1+ only:** hardened blocks can be used as camouflage (other blocks with a block entity still cannot)
 
 ### Other
 
 - License: the source code is now MIT (was GPLv3) and the art CC BY-NC-SA 4.0
 - **1.12.2 only:** `turretBreakable` makes turrets mineable with a pickaxe (hardness 3, needs a restart)
-- **1.20.1+ only:** the jar files are named `openmodularturrets-<version>-mc<minecraft version>-<loader>.jar`, and releases on CurseForge and Modrinth are titled the same way
+- The jar files are named `<mod>-<version>-mc<minecraft version>-<loader>.jar` (`openmodularturrets`; on 1.12.2 also `omlib` and `ompd`)
+- **1.20.1+ only:** releases on CurseForge and Modrinth are titled like the jar file
 - **1.20.1+ only:** German and English (UK) translations completed
 
 ## Removed
@@ -140,6 +158,7 @@ On 1.12.2, _OMLib_ or _OMPD_ after the prefix names the mod that changed; the ot
 ## Fixed
 
 - The `turretBreakable` config option did nothing; turrets can now be broken with a pickaxe when it is enabled
+- Cranks and generators did not turn with rotated or mirrored structures
 - **1.12.2 only:** the Melee, Relativistic and Teleporter Turrets crashed the game when they were saved (3.2.0 alpha)
 - **1.12.2 only:** player kills of a base are counted and saved (they were loaded into the kill counter and never saved)
 - **1.12.2 only:** the neutral force list config was read into the mob block list
@@ -157,15 +176,35 @@ On 1.12.2, _OMLib_ or _OMPD_ after the prefix names the mod that changed; the ot
 - **1.12.2 only:** ComputerCraft: `setTurretAutoForceFire` and `forceShootTurret` rejected every valid side
 - **1.12.2 only:** ComputerCraft: number arguments (access levels, modes, sides) were rejected because Lua numbers arrive as decimals; missing arguments now answer "Wrong parameters!"
 - **1.12.2 only:** WAILA/HWYLA crashed the server on a turret whose base was not loaded, and showed the accuracy deviation instead of the accuracy
+- **1.12.2 only:** turrets added by other mods could not fire slower than every 20 ticks (their config clamped `baseFireRate` to 20)
+- **1.12.2 only:** decimal settings of turrets added by other mods (damage amp, upgrades, recycler chances, accuracy deviation) were not limited to their range
+- **1.12.2 only:** the config ranges of `baseFireRate` (now 1–200 ticks) and `baseAccuracyDeviation` (0–100 %) did not include the turrets' default values
+- **1.12.2 only:** computers (ComputerCraft, OpenComputers) could not change access levels: `changeAccessLevel` / `changeTrustedPlayerAccess` and `addTrustedPlayer` with a level reported success but changed nothing
+- **1.12.2 only:** OpenComputers: `setTurretYawPitch` rejected valid angles and used the side as yaw, `forceShootTurret` did not check the side, side 6 counted as the bottom, `addTrustedPlayer` without an access level failed, `getTrustedPlayer` returned nothing for unknown players
+- **1.12.2 only:** turret base GUI actions (range, mode, targeting, dropping) were handled for unloaded or far-away bases, which could load chunks; they now need the base loaded and the player within reach
+- **1.12.2 only:** other mods asking a turret without base (or with its base in an unloaded chunk) for its stats crashed; such a turret now reports its configured values and targets nothing
+- **1.12.2 only:** the maximum range shown in the turret base GUI also counted turrets mounted on a neighbouring base
+- **1.12.2 only:** turret bases, _OMLib_'s camouflaged blocks and _OMPD_'s camo traps could create their tile entity on the chunk render thread, which can crash or corrupt the world
+- **1.12.2 only:** a turret base placed without saved data (e.g. by `/setblock` or a structure) with turrets already attached no longer starts with range 0; it starts at the range of its shortest reaching turret
+- **1.12.2 only:** boxes in the turret logic compared `0.0` and `-0.0` as equal while hashing them differently
+- **1.12.2 only:** tooltips and the turret placement outline used the client's own config instead of the server's
 - **1.12.2 only** · _OMLib_: machines answered other mods' Redstone Flux (RF) capability requests with nothing, and crashed with Redstone Flux installed but not Tesla
 - **1.12.2 only** · _OMLib_: camouflaged blocks could render as grass while their tile entity was missing
 - **1.12.2 only** · _OMLib_: the trusted players GUI crashed on the remove and permission buttons when no player was selected
 - **1.12.2 only** · _OMLib_: the target settings GUI crashed when closed for machines without client sync
 - **1.12.2 only** · _OMLib_: very old trust lists (saved as a plain list of names) are read again
+- **1.12.2 only** · _OMLib_: clients could make the server load or generate chunks anywhere by sending trust list, camouflage or GUI messages for far-away positions; these messages now need the block loaded and the player within reach
+- **1.12.2 only** · _OMLib_: players without access to a block could receive its updates (trust list, settings) by sending its GUI-open message
+- **1.12.2 only** · _OMLib_: loading a world kept the owner share lists (`/omlib share`) of the world opened before it in the same game
+- **1.12.2 only** · _OMLib_: a renamed player (or, in offline mode, a player with another UUID) could be missed in lookups of players and trusted players
+- **1.12.2 only** · _OMLib_: changes in OMLib's config GUI were only applied after a restart
+- **1.12.2 only** · _OMLib_: the debug tool crashed a dedicated server when used on a turret base
+- **1.12.2 only** · _OMLib_: items dropped from a broken machine lost data other mods keep on the item stack (capabilities)
 - **1.12.2 only** · _OMPD_: crash on hardened blocks, walls, fences and camo traps with invalid metadata (damaged chunks, /give)
 - **1.12.2 only** · _OMPD_: hardened blocks, walls, fences and camo traps placed by something other than a player (e.g. a deployer) crashed the game
 - **1.12.2 only** · _OMPD_: sneak-right-clicking your own block with an empty hand did not always pick it up
 - **1.12.2 only** · _OMPD_: the creative tab showed its translation key instead of its name
+- **1.12.2 only** · _OMPD_: WAILA/HWYLA showed no owner name for hardened blocks, walls and fences
 - **1.20.1+ only:** shift-clicking addons and upgrades into a turret base no longer ignores their slot stack limit
 - **1.20.1+ only:** projectiles now properly apply on-hit effects on their motion, and grenades no longer hurl away when they hit entities
 - **1.20.1+ only:** Potato Cannon and Disposable Turret projectiles are visible right at the turret instead of a few blocks away, and show a potato or cobblestone when fired without ammo (Creative Upgrade)
@@ -175,7 +214,9 @@ On 1.12.2, _OMLib_ or _OMPD_ after the prefix names the mod that changed; the ot
 - **1.20.1+ only:** the English (UK) Turret Limit label was broken
 - **1.20.1+ only:** the mod metadata named the wrong license (GPL-3.0); the jar now contains all three license files
 - **1.20.1+ only:** turret bases and generators no longer drop a second copy of their items when they are moved or replaced without breaking (`/setblock`, mods that move blocks)
-- **1.20.1+ only:** turrets, cranks and generators turn with rotated or mirrored structures and moved blocks, so turrets and cranks stay attached to their base
+- **1.20.1+ only:** turrets also turn with rotated or mirrored structures, and turrets, cranks and generators with moved blocks, so turrets and cranks stay attached to their base
+- **1.20.1+ only:** adding a trusted player by a name the server does not know no longer freezes the server while the name is looked up at Mojang
+- **1.20.1+ only:** "Drop turrets" only breaks blocks that are still turrets
 
 ## For mod and addon developers
 
@@ -187,58 +228,21 @@ On 1.12.2, _OMLib_ or _OMPD_ after the prefix names the mod that changed; the ot
 - **1.12.2 only** · _OMLib_: the client-only GUI and render helpers moved from `omtteam.omlib.api.gui` / `api.render` to `omtteam.omlib.client.gui` / `client.render` (`ColorOM`, `ICamoSupport` and `RenderBlockStateContainer` stay)
 - **1.12.2 only** · _OMLib_: `ICamoSupport` has four new methods (`isCamoEnabled`, `supportsLight`, `canSetCamo`, `canChangeLight`), and `getOwnedBlock()` is now `getCamoTileEntity()`, returning any `TileEntity`, so camouflage hosts no longer need to be owned blocks
 - **1.12.2 only** · _OMLib_: memory card rules (`core.card`: card data, who may copy and write, trust list copying) shared by turret bases and camouflage traps
+- **1.12.2 only** · _OMLib_: tile entity base `tileentity.TileEntitySynced` (data hooks `readData` / `writeData`, separate client data `writeClientData`, `syncToClient`, `remesh`); `TileEntityBase` now builds on it and behaves as before
+- **1.12.2 only** · _OMLib_: `container.WindowValues` syncs int values of a container to its GUI as window properties (two 16-bit halves each)
+- **1.12.2 only** · _OMLib_: `util.inventory.InvUtil.dropItems` spills an inventory when its block breaks, `inventory.AutomationItemHandler` is the hopper/pipe view of a machine's slots
+- **1.12.2 only** · _OMLib_: `WorldUtil.getTileEntity(IBlockAccess, BlockPos)` looks up a tile entity without creating it
+- **1.12.2 only** · _OMLib_: `api.permission.IOwnedHost` (owner, claim, clear; implemented by `TileEntityOwnedBlock`), `handler.ClaimSpread`, `block.UnownedMarker` (green sparkle on unowned blocks), `api.block.IPlainLookingBlock` (blocks with a tile entity that may still be a disguise) and `IDrawOutline.canPlace` with the player
+- **1.12.2 only** · _OMLib_: removed the tile entity base classes `TileEntityElectric`, `TileEntityContainerElectric`, `TileEntityMachine`, `TileEntityTrustedMachine` and `TileEntityContainer`; tile entities hold the helpers `power.EnergyCapabilities` and `tileentity.InventoryNbt` instead (same NBT keys)
 - **1.12.2 only** · _OMLib_: removed the unused device network API (`api.network.OMLibNetwork`, `INetworkTile`, `IPowerExchangeTile`, `IController`, `INameController`) and helpers (`Tuple3`, `EntityUtil`, `ItemUtil`, `ItemStackList`, `PropertyTools`, `BlockingAbstractGui`)
 
 ## Coming in the next pre-release
 
 These changes are done but not released yet.
 
-### Added
-
-- **1.12.2 only:** holding a turret next to a turret base where it cannot be placed shows a short reason next to the red outline (block in the way, wrong side, base tier too low, base full, too many of this turret), as on 1.20.1+
-- **1.12.2 only:** the server sends its config values (OMT's `openmodularturrets.cfg` and `openmodularturrets_addon_turrets.cfg`, _OMLib_'s `omlib.cfg`) to clients when they join, so tooltips, ammo slots, the turret placement outline and GUIs follow the server's rules; after leaving, the client uses its own config again
-- **1.20.1+ only:** right-clicking a turret base, turret, camouflage trap or hardened block/wall/fence without an owner claims it and the unowned blocks connected to it (up to `bases.claimSpreadLimit`, default 1024); machines' fake players only claim if `general.fakePlayersCanClaim` is set
-- **1.20.1+ only:** Ownership Wand (creative, operators only) for mapmakers: right-click makes you the owner of an owned block, sneak-right-click removes its owner; it spreads to the connected blocks of the same owner unless switched off with a sneak-right-click into the air
-- **1.20.1+ only:** the owner of a turret base (configure screen) or camouflage trap can disown it after a confirmation; the trust list is cleared and anyone can claim it
-- **1.20.1+ only:** turret bases, their turrets and hardened blocks/walls/fences without an owner sparkle green, and Jade shows "Owner: nobody (right-click to claim)"; hardened blocks, walls and fences now show their owner in Jade
-
-### Changed
-
-- **1.12.2 only:** the jar files are named `<mod>-<version>-mc1.12.2-forge.jar` (`openmodularturrets`, `omlib`, `ompd`), as on 1.20.1+
-- **1.12.2 only:** a broken turret base scatters its items like a chest
-- **1.20.1+ only:** only admins of a turret base can attach turrets to it (the placement outline says why otherwise)
-- **1.20.1+ only:** hoppers and pipes can no longer take ammo out of a turret base, so nobody can disarm someone else's base with them
-- **1.20.1+ only:** turret bases without an owner (e.g. placed by a machine or a structure) no longer drop themselves; they stay inert, unless `bases.unownedBasesActive` is set
-- **1.20.1+ only:** turrets can be attached to a turret base without an owner only by players who may use game master blocks (operators, mapmakers)
-
 ### Fixed
 
-- **1.12.2 only:** turrets added by other mods could not fire slower than every 20 ticks (their config clamped `baseFireRate` to 20)
-- **1.12.2 only:** decimal settings of turrets added by other mods (damage amp, upgrades, recycler chances, accuracy deviation) were not limited to their range
-- **1.12.2 only:** the config ranges of `baseFireRate` (now 1–200 ticks) and `baseAccuracyDeviation` (0–100 %) did not include the turrets' default values
-- **1.12.2 only:** computers (ComputerCraft, OpenComputers) could not change access levels: `changeAccessLevel` / `changeTrustedPlayerAccess` and `addTrustedPlayer` with a level reported success but changed nothing
-- **1.12.2 only:** OpenComputers: `setTurretYawPitch` rejected valid angles and used the side as yaw, `forceShootTurret` did not check the side, side 6 counted as the bottom, `addTrustedPlayer` without an access level failed, `getTrustedPlayer` returned nothing for unknown players
-- **1.12.2 only:** turret base GUI actions (range, mode, targeting, dropping) were handled for unloaded or far-away bases, which could load chunks; they now need the base loaded and the player within reach
-- **1.12.2 only** · _OMLib_: clients could make the server load or generate chunks anywhere by sending trust list, camouflage or GUI messages for far-away positions; these messages now need the block loaded and the player within reach
-- **1.12.2 only** · _OMLib_: players without access to a block could receive its updates (trust list, settings) by sending its GUI-open message
-- **1.12.2 only:** other mods asking a turret without base (or with its base in an unloaded chunk) for its stats crashed; such a turret now reports its configured values and targets nothing
-- **1.12.2 only:** the maximum range shown in the turret base GUI also counted turrets mounted on a neighbouring base
-- **1.12.2 only:** turret bases, _OMLib_'s camouflaged blocks and _OMPD_'s camo traps could create their tile entity on the chunk render thread, which can crash or corrupt the world
-- **1.12.2 only** · _OMLib_: loading a world kept the owner share lists (`/omlib share`) of the world opened before it in the same game
-- **1.12.2 only** · _OMLib_: a renamed player (or, in offline mode, a player with another UUID) could be missed in lookups of players and trusted players
-- **1.12.2 only** · _OMLib_: changes in OMLib's config GUI were only applied after a restart
-- **1.12.2 only** · _OMLib_: the debug tool crashed a dedicated server when used on a turret base
-- **1.12.2 only** · _OMLib_: items dropped from a broken machine lost data other mods keep on the item stack (capabilities)
-- **1.20.1+ only:** adding a trusted player by a name the server does not know no longer freezes the server while the name is looked up at Mojang
-- **1.20.1+ only:** "Drop turrets" only breaks blocks that are still turrets
-
-### For mod and addon developers
-
-- **1.12.2 only** · _OMLib_: tile entity base `tileentity.TileEntitySynced` (data hooks `readData` / `writeData`, separate client data `writeClientData`, `syncToClient`, `remesh`); `TileEntityBase` now builds on it and behaves as before
-- **1.12.2 only** · _OMLib_: `container.WindowValues` syncs int values of a container to its GUI as window properties (two 16-bit halves each)
-- **1.12.2 only** · _OMLib_: `util.inventory.InvUtil.dropItems` spills an inventory when its block breaks, `inventory.AutomationItemHandler` is the hopper/pipe view of a machine's slots
-- **1.12.2 only** · _OMLib_: `WorldUtil.getTileEntity(IBlockAccess, BlockPos)` looks up a tile entity without creating it
-- **1.12.2 only** · _OMLib_: removed the tile entity base classes `TileEntityElectric`, `TileEntityContainerElectric`, `TileEntityMachine`, `TileEntityTrustedMachine` and `TileEntityContainer`; tile entities hold the helpers `power.EnergyCapabilities` and `tileentity.InventoryNbt` instead (same NBT keys)
+- **1.20.1+ only:** a turret base placed without saved data (e.g. by `/setblock` or a structure) with turrets already attached no longer starts with range 0; it starts at the range of its shortest reaching turret (1.12.2 has this fix since 4.0.0-beta.2)
 
 ## Release history
 
@@ -249,13 +253,14 @@ These changes are done but not released yet.
 | 4.0.0-alpha.3 | | 2026-10-13 |
 | 4.0.0-alpha.4 | | 2026-10-13 |
 | 4.0.0-beta.1 | 2026-10-24 | 2026-10-14 |
-| 4.0.0-beta.2 | | 2026-10-15 |
+| 4.0.0-beta.2 | 2026-10-26 | 2026-10-15 |
 | 4.0.0-beta.3 | | 2026-10-15 |
 | 4.0.0-beta.4 | | 2026-10-17 |
 | 4.0.0-beta.5 | | 2026-10-21 |
 | 4.0.0-beta.6 | | 2026-10-24 |
 | 4.0.0-beta.7 | | 2026-10-24 |
 | 4.0.0-beta.8 | | 2026-10-25 |
+| 4.0.0-beta.9 | | 2026-10-25 |
 
 The changelogs of the single releases are in the mods' repositories:
 [OpenModularTurrets 1.20.1+](https://github.com/OpenModularTurretsTeam/OpenModularTurrets/blob/1.20.1%2B/CHANGELOG.md),

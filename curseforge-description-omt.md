@@ -7,7 +7,7 @@ permalink: /curseforge-description-omt/
 ## Important Stuff
 
 **1.20.1** / **1.21.1** builds of OMT (Fabric 1.20.1 and 1.21.1, NeoForge 1.21.1, Forge 1.20.1) need no other mod of ours: OMLib is not needed, and Open Modular Passive Defense's blocks are included.
-**1.12.2** builds of OMT require [OMLib](https://minecraft.curseforge.com/projects/omlib) for 1.12.2 (OMT 4.0.0 needs OMLib 4.0.0-beta.1 or newer).
+**1.12.2** builds of OMT require [OMLib](https://minecraft.curseforge.com/projects/omlib) for 1.12.2 (OMT 4.0.0-beta.2 needs OMLib 4.0.0-beta.2 or newer).
 **1.7.10**, **1.10** and **1.11** are **NOT SUPPORTED** anymore.
 
 For 1.12.2, Open Modular Passive Defence can be found [here](https://minecraft.curseforge.com/projects/open-modular-passive-defense).
@@ -31,6 +31,7 @@ We need _Coders_ for our mods. If you are interested write [Keridos](https://www
 - _Add_: trusted players for camouflage traps
 - _Add_: Turret API for other mods
 - _Add_: Jade tooltips and Sable/Create contraption support (1.20.1+)
+- _Add_: claiming blocks without an owner and an Ownership Wand for mapmakers
 - _Change_: new targeting and aiming system for turrets
 - _Change_: the Relativistic Turret is now the Slowing Turret
 - _Remove_: inventory and power expanders and the loot deleter addon (1.12.2: they disappear from your world, back it up first)
