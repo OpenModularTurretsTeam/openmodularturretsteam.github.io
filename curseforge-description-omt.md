@@ -6,11 +6,11 @@ permalink: /curseforge-description-omt/
 
 ## Important Stuff
 
-**1.10.2** / **1.11.2** / **1.12** builds of OMT require [OMLib](https://minecraft.curseforge.com/projects/omlib) for their respective Minecraft version.
-Note that the **1.10** versions of the mod also work with **1.11** Minecraft.
-**1.7.10** is **NOT SUPPORTED** anymore, **1.10**/**1.11** will receive _limited_ support.
+**1.20.1** / **1.21.1** builds of OMT (Fabric 1.20.1 and 1.21.1, NeoForge 1.21.1, Forge 1.20.1) need no other mod of ours: OMLib is not needed, and Open Modular Passive Defense's blocks are included.
+**1.12.2** builds of OMT require [OMLib](https://minecraft.curseforge.com/projects/omlib) for 1.12.2 (OMT 4.0.0 needs OMLib 4.0.0-beta.1 or newer).
+**1.7.10**, **1.10** and **1.11** are **NOT SUPPORTED** anymore.
 
-Open Modular Passive Defence can be found [here](https://minecraft.curseforge.com/projects/open-modular-passive-defense).
+For 1.12.2, Open Modular Passive Defence can be found [here](https://minecraft.curseforge.com/projects/open-modular-passive-defense).
 
 You can join our Discord Server [here](https://discord.gg/SEG695u), please note the pinned messaged in `#news`, we had spammers, so we disabled the permission for new users to write in all channels except `#spam`.
 
@@ -23,17 +23,19 @@ Grab the latest stable releases from this project page, and the dev builds from 
 ## News:
 We need _Coders_ for our mods. If you are interested write [Keridos](https://www.curseforge.com/members/keridos) a message or on our Discord and ping _@Keridos_ there.
 
-#### Update 4.0.x (**in planning**, for _1.12/1.14_):
-- _Add_: multiblock bases
-- _Add_: 5 new turrets, for details see our roadmap
-- _Add_: new targeting system for turrets (**WIP**)
-- _Add_: Valkyrien Warfare compatability (**WIP**)
-- _Add_: Securicraft compatability (**WIP**)
-- _Add_: config list for forcing entities to be regarded as hostile/neutral (**WIP**)
-- _Add_: 3 more targeting related OC+CC functions (**WIP**)
-- _Change_: some turrets/addons will need certain size/features of multiblock base
-- _Change_: some turrets functionality might be reworked bit
-- _Change_: completely revamp upgrade system (instead of icons, use blocks in multiblock)
+#### Update 4.0.0 (**in beta**, for _1.12.2_ and _1.20.1+_):
+- _Add_: 1.20.1 and 1.21.1 versions (Fabric, NeoForge 1.21.1, Forge 1.20.1)
+- _Add_: Generator with Energy Multiplier Upgrades
+- _Add_: camouflage menu with light settings for turret bases and camouflage traps
+- _Add_: memory card that copies the settings of bases and camouflage traps
+- _Add_: trusted players for camouflage traps
+- _Add_: Turret API for other mods
+- _Add_: Jade tooltips and Sable/Create contraption support (1.20.1+)
+- _Change_: new targeting and aiming system for turrets
+- _Change_: the Relativistic Turret is now the Slowing Turret
+- _Remove_: inventory and power expanders and the loot deleter addon (1.12.2: they disappear from your world, back it up first)
+
+Full changelog: [openmodularturretsteam.github.io/changelog/4.0.0](https://openmodularturretsteam.github.io/changelog/4.0.0/)
 
 #### Update 3.1.0 (**released**, only for _1.12.2_):
 - _Add_: Turrets honor team settings. (**done**)

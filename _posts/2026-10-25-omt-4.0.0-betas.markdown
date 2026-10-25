@@ -1,0 +1,37 @@
+---
+layout: post
+title:  "OMT 4.0.0 betas for 1.12.2 and 1.20.1+"
+date:   2026-10-25 12:00:00 +0100
+categories: update
+---
+Hello everyone,
+<br>
+Open Modular Turrets 4.0.0 is in beta, for Minecraft 1.12.2 and, for the first time, for modern Minecraft:
+
+- **1.20.1+**: 4.0.0-beta.8 for Fabric 1.20.1 and 1.21.1, NeoForge 1.21.1 and Forge 1.20.1.
+  Open Modular Passive Defense's hardened blocks, walls, fences and the camouflage trap are part of the mod, and OMLib is not needed.
+- **1.12.2**: 4.0.0-beta.1 of OMT, OMLib and OMPD (Forge).
+  OMT and OMPD need OMLib 4.0.0-beta.1 or newer.
+
+The highlights:
+
+- **Generator**: burns furnace fuel into energy for your turret bases, with Energy Multiplier Upgrades
+- **Camouflage menu** for turret bases and camouflage traps, with light sliders on tier 4 and 5 bases and the trap
+- **Memory card** that copies a base's or trap's targeting, trust list, disguise and light settings
+- **Trusted players for camouflage traps**
+- **Reworked targeting and aiming**: projectile turrets lead their targets and no longer shoot into their own base
+- **Melee Turret** with a model, and **Slowing Turret** as the new name of the Relativistic Turret
+- **Turret API**, so other mods can add their own turrets
+- On 1.20.1+: Jade tooltips, and turrets on Sable and Create contraptions
+
+4.0.0 also removes some things on 1.12.2: inventory and power expanders, the loot deleter addon and OMLib's network cable disappear from your world, the expanders together with the items in them.
+Back up your world before you update.
+
+The full changelog, merged from all alphas and betas of both versions, is [here](/changelog/4.0.0/).
+The roadmap is updated too, see [here](/roadmap/).
+
+These are betas: expect bugs, and please report them on GitHub or on our Discord.
+<br>
+
+Greetings and have fun
+_Keridos_
