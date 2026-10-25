@@ -51,7 +51,9 @@ When a mod releases, update it like this:
 
 ## Other pages
 
-- A new release that players should hear about gets a post in `_posts/YYYY-MM-DD-<slug>.markdown` (front matter `layout: post`, `categories: update`) with the highlights and a link to the merged changelog.
+- Write a new post only for a regular (non-pre-release) version, or when the user asks for one.
+  Alpha and beta releases get no post: update the changelog pages, the roadmap and the CurseForge description instead.
+- A post goes in `_posts/YYYY-MM-DD-<slug>.markdown` (front matter `layout: post`, `categories: update`) with the highlights and a link to the merged changelog.
   Keep the post date in the past (Jekyll does not publish future posts).
 - `roadmap.md` and `curseforge-description-omt.md` list the state per version (`(**done**)`, `(**WIP**)`); update them to match the changelogs.
 
