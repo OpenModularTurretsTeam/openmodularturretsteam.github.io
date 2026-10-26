@@ -12,7 +12,7 @@ The current pre-releases are:
 | Minecraft | Loaders | Requires | Latest |
 | --- | --- | --- | --- |
 | 1.12.2 | Forge | OMLib 4.0.0-beta.2 or newer | 1.0.0-beta.7 (2026-10-26) |
-| 1.20.1+ | Fabric 1.20.1 and 1.21.1, NeoForge 1.21.1, Forge 1.20.1 | Fabric API on Fabric | 1.0.0-beta.5 (2026-10-24) |
+| 1.20.1+ | Fabric 1.20.1, 1.21.1 and 1.21.11, NeoForge 1.21.1 and 1.21.11, Forge 1.20.1 | Fabric API on Fabric | 1.0.0-beta.8 (2026-10-26) |
 
 **How to read this page:**
 a line without a prefix applies to both versions.
@@ -23,7 +23,7 @@ The 1.12.2 version is a port of the 1.20.1+ version and has its lights and featu
 
 ### Versions and loaders
 
-- **1.20.1+ only:** Fabric 1.20.1 and 1.21.1 (since alpha.1), NeoForge 1.21.1 (since beta.3) and Forge 1.20.1 (since beta.5)
+- **1.20.1+ only:** Fabric 1.20.1 and 1.21.1 (since alpha.1), NeoForge 1.21.1 (since beta.3), Forge 1.20.1 (since beta.5), and Minecraft 1.21.11 for Fabric and NeoForge (since beta.8)
 - **1.12.2 only:** Forge 1.12.2 (since beta.6); it requires OMLib, and OMLib's wrench configures and dismantles lights
 
 ### Lights
@@ -64,12 +64,21 @@ Compared with the 1.7.10 _FloodLights_ mod:
 - Floodlight beams use fewer phantom lights: the straight beam skips every second block (starting with the second); cones thin out too: the centre line like the straight beam, the rest of the cone offset by one from it
 - Lights re-check their beam every 20 seconds on average (random), so it follows world changes that sent no block update
 - Cube and fluorescent lights turn back on at once, without the 2-second timeout after turning off
-- **1.12.2 only:** the jar files are named `openmodularlighting-<version>-mc1.12.2-forge.jar`, as in the other OpenModularTurretsTeam 1.12.2 mods
-- **1.20.1+ only:** file names and the mod version name the loader (e.g. `+1.21.1-fabric`)
+
+### Compared with earlier betas
+
+- The jar files are named `openmodularlighting-<version>-mc<minecraft version>-<loader>.jar` (`-mc` instead of the `+` before the Minecraft version), as in the other OpenModularTurretsTeam mods
+- **1.20.1+ only:** releases on CurseForge and Modrinth are titled like the jar file
+- **1.20.1+ only:** `uvLightRendered` is now each player's own setting: on a server, the client's config decides whether UV light blocks are visible
+- **1.20.1+ only:** the floodlight GUIs have a dark grey background like the turret GUIs instead of the vanilla light grey
 
 ## Fixed
 
 - Light bulbs can be crafted when only the grow light is enabled
+- **1.20.1+ only:** players in adventure mode can no longer dismantle lights with a wrench
+- **1.20.1+ only:** fuels with a huge burn time (modded) no longer get stuck in the carbon floodlight's slot
+- **1.20.1+ only:** no crash when rendering a disguised floodlight on Fabric without a renderer implementation (e.g. Sodium without Indium on 1.20.1)
+- **1.20.1+ only:** no stray black line below the left corner of the floodlight GUIs
 
 ## Coming in the next pre-release
 
@@ -77,14 +86,15 @@ These changes are done but not released yet.
 
 ### Changed
 
-- **1.20.1+ only:** the jar files are named `openmodularlighting-<version>-mc<minecraft version>-<loader>.jar` (`-mc` instead of the `+` before the Minecraft version), and releases on CurseForge and Modrinth are titled the same way
-- **1.20.1+ only:** `uvLightRendered` is now each player's own setting: on a server, the client's config decides whether UV light blocks are visible
+- **1.12.2 only:** the floodlight GUIs have a dark grey background like the turret GUIs instead of the vanilla light grey (1.20.1+ has this since 1.0.0-beta.8)
 
 ### Fixed
 
-- **1.20.1+ only:** players in adventure mode can no longer dismantle lights with a wrench
-- **1.20.1+ only:** fuels with a huge burn time (modded) no longer get stuck in the carbon floodlight's slot
-- **1.20.1+ only:** no crash when rendering a disguised floodlight on Fabric without a renderer implementation (e.g. Sodium without Indium on 1.20.1)
+- **1.12.2 only:** players in adventure mode can no longer dismantle lights with a wrench
+- **1.12.2 only:** fuels with a huge burn time (modded) no longer get stuck in the carbon floodlight's slot
+- **1.12.2 only:** `uvLightRendered` is each player's own setting: on a server, the client's config decides whether UV light blocks are visible
+- **1.12.2 only:** light blocks are only saved when their light sources changed
+- **1.12.2 only:** no stray black line below the left corner of the floodlight GUIs
 
 ## Release history
 
@@ -98,6 +108,7 @@ These changes are done but not released yet.
 | 1.0.0-beta.5 | | 2026-10-24 |
 | 1.0.0-beta.6 | 2026-10-24 | |
 | 1.0.0-beta.7 | 2026-10-26 | |
+| 1.0.0-beta.8 | | 2026-10-26 |
 
 The changelogs of the single releases are in the mod's repository:
 [OpenModularLighting 1.20.1+](https://github.com/OpenModularTurretsTeam/OpenModularLighting/blob/1.20.1%2B/CHANGELOG.md),

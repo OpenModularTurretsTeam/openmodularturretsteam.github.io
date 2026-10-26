@@ -7,7 +7,7 @@ permalink: /curseforge-description-omt/
 ## Important Stuff
 
 **1.20.1** / **1.21.1** builds of OMT (Fabric 1.20.1 and 1.21.1, NeoForge 1.21.1, Forge 1.20.1) need no other mod of ours: OMLib is not needed, and Open Modular Passive Defense's blocks are included.
-**1.12.2** builds of OMT require [OMLib](https://minecraft.curseforge.com/projects/omlib) for 1.12.2 (OMT 4.0.0-beta.2 needs OMLib 4.0.0-beta.2 or newer).
+**1.12.2** builds of OMT require [OMLib](https://minecraft.curseforge.com/projects/omlib) for 1.12.2 (OMT 4.0.0-beta.3 needs OMLib 4.0.0-beta.3 or newer).
 **1.7.10**, **1.10** and **1.11** are **NOT SUPPORTED** anymore.
 
 For 1.12.2, Open Modular Passive Defence can be found [here](https://minecraft.curseforge.com/projects/open-modular-passive-defense).

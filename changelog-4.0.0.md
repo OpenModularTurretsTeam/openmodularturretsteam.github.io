@@ -11,7 +11,7 @@ The current pre-releases are:
 
 | Minecraft | Loaders | Mods | Latest |
 | --- | --- | --- | --- |
-| 1.12.2 | Forge | OMT, OMLib, OMPD | 4.0.0-beta.2 (2026-10-26) |
+| 1.12.2 | Forge | OMT, OMLib, OMPD | 4.0.0-beta.3 (2026-10-26) |
 | 1.20.1+ | Fabric 1.20.1 and 1.21.1, NeoForge 1.21.1, Forge 1.20.1 | OMT (OMPD and OMLib included) | 4.0.0-beta.9 (2026-10-25) |
 
 **How to read this page:**
@@ -22,7 +22,7 @@ On 1.12.2, _OMLib_ or _OMPD_ after the prefix names the mod that changed; the ot
 
 ## Before you update
 
-- **1.12.2 only:** OMT and OMPD 4.0.0-beta.2 require OMLib 4.0.0-beta.2 or newer
+- **1.12.2 only:** OMT and OMPD 4.0.0-beta.3 require OMLib 4.0.0-beta.3 or newer
 - **1.12.2 only:** inventory and power expanders, the loot deleter addon and _OMLib_'s network cable disappear from your world, the expanders together with the items in them; placed 3.x power generators become generators and keep their fuel
 - **1.12.2 only:** the Relativistic Turret becomes the Slowing Turret; placed turrets, items and its config section are converted
 - **1.20.1+ only:** Relativistic Turrets placed with 4.0.0-alpha.1 to 4.0.0-beta.2 disappear (renamed to Slowing Turret in beta.3); resource packs replacing its sound need the new name `openmodularturrets:slowing`
@@ -127,6 +127,7 @@ On 1.12.2, _OMLib_ or _OMPD_ after the prefix names the mod that changed; the ot
 - **1.12.2 only:** the Recycler addon saves ammo with the configured chance (it saved about 1 % of shots whatever the config said)
 - **1.12.2 only:** the Solar Panel addon charges a base once per tick instead of once per tick for every turret on it
 - **1.12.2 only:** turret bases no longer give their energy to other blocks
+- **1.12.2 only:** the generator GUI labels are black like in the other turret GUIs (they were dark grey on the dark background)
 - **1.12.2 only** · _OMLib_: stored energy above a lowered capacity is cut off
 - **1.12.2 only** · _OMLib_: owned blocks without an owner no longer count as owned by a placeholder player; they stay unowned until someone claims them
 
@@ -134,6 +135,7 @@ On 1.12.2, _OMLib_ or _OMPD_ after the prefix names the mod that changed; the ot
 
 - Right-clicking a turret base or camouflage trap with a block no longer camouflages it; the camouflage menu does it now
 - Hardened blocks can be used as camouflage (other blocks with a tile/block entity still cannot)
+- **1.12.2 only** · _OMLib_: the camouflage menu has a dark grey background like the turret base GUI instead of the vanilla light grey
 - **1.12.2 only** · _OMPD_: the camouflage trap blocks light like a solid block by default
 - **1.12.2 only** · _OMPD_: fences no longer hurt the owner's team and their pets
 
@@ -240,6 +242,11 @@ On 1.12.2, _OMLib_ or _OMPD_ after the prefix names the mod that changed; the ot
 
 These changes are done but not released yet.
 
+### Changed
+
+- **1.20.1+ only:** the camouflage menu has a dark grey background like the turret base GUI instead of the vanilla light grey (1.12.2 has this since 4.0.0-beta.3)
+- **1.20.1+ only:** the generator GUI labels are black like in the other turret GUIs (1.12.2 has this since 4.0.0-beta.3)
+
 ### Fixed
 
 - **1.20.1+ only:** a turret base placed without saved data (e.g. by `/setblock` or a structure) with turrets already attached no longer starts with range 0; it starts at the range of its shortest reaching turret (1.12.2 has this fix since 4.0.0-beta.2)
@@ -254,7 +261,7 @@ These changes are done but not released yet.
 | 4.0.0-alpha.4 | | 2026-10-13 |
 | 4.0.0-beta.1 | 2026-10-24 | 2026-10-14 |
 | 4.0.0-beta.2 | 2026-10-26 | 2026-10-15 |
-| 4.0.0-beta.3 | | 2026-10-15 |
+| 4.0.0-beta.3 | 2026-10-26 | 2026-10-15 |
 | 4.0.0-beta.4 | | 2026-10-17 |
 | 4.0.0-beta.5 | | 2026-10-21 |
 | 4.0.0-beta.6 | | 2026-10-24 |

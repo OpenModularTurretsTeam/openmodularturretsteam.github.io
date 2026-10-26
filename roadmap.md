@@ -10,7 +10,7 @@ Here is the state of our mods and the changes planned for them.
 
 ### _v4.0.x_ (in beta, for _1.12.2_ and _1.20.1+_)
 
-Released as betas: 4.0.0-beta.2 for 1.12.2 (Forge), 4.0.0-beta.9 for 1.20.1+ (Fabric 1.20.1 and 1.21.1, NeoForge 1.21.1, Forge 1.20.1).
+Released as betas: 4.0.0-beta.3 for 1.12.2 (Forge), 4.0.0-beta.9 for 1.20.1+ (Fabric 1.20.1 and 1.21.1, NeoForge 1.21.1, Forge 1.20.1).
 See the [full 4.0.0 changelog](/changelog/4.0.0/).
 
 - _Add_: 1.20.1 and 1.21.1 versions (Fabric, NeoForge 1.21.1, Forge 1.20.1), with OMPD's blocks included and without OMLib (**done**)
@@ -94,7 +94,7 @@ On 1.20.1+, its blocks are part of Open Modular Turrets.
 ### _v1.0.x_ (in beta, for _1.12.2_ and _1.20.1+_)
 
 Floodlights, a port of the 1.7.10 _FloodLights_ mod.
-Released as betas: 1.0.0-beta.7 for 1.12.2 (Forge, needs OMLib 4.0.0-beta.2 or newer), 1.0.0-beta.5 for 1.20.1+ (Fabric 1.20.1 and 1.21.1, NeoForge 1.21.1, Forge 1.20.1).
+Released as betas: 1.0.0-beta.7 for 1.12.2 (Forge, needs OMLib 4.0.0-beta.2 or newer), 1.0.0-beta.8 for 1.20.1+ (Fabric 1.20.1, 1.21.1 and 1.21.11, NeoForge 1.21.1 and 1.21.11, Forge 1.20.1).
 See the [full 1.0.0 changelog](/changelog/oml-1.0.0/).
 
 - _Add_: electric, carbon (non-electric) and UV floodlights with straight, narrow cone and wide cone beams (**done**)
