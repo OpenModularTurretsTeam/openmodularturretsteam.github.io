@@ -11,15 +11,15 @@ They are in the two workspaces next to this repo:
 | Version line | Folder | Changelogs |
 | --- | --- | --- |
 | 1.12.2 (Forge) | `../OMTTeam1.12` | `OpenModularTurrets/CHANGELOG.md`, `OMLib/CHANGELOG.md`, `OpenModularPassiveDefense/CHANGELOG.md` |
-| 1.20.1+ (Fabric 1.20.1/1.21.1, NeoForge 1.21.1, Forge 1.20.1) | `../OMT1.20.1+` | `CHANGELOG.md` (OMPD and OMLib are part of OMT there) |
+| 1.20.1 and 1.21.1 (Fabric 1.20.1/1.21.1, NeoForge 1.21.1, Forge 1.20.1) | `../OMT1.20.1+` (folder and branch keep the name "1.20.1+") | `CHANGELOG.md` (OMPD and OMLib are part of OMT there) |
 
 Open Modular Lighting (OML) has its own versions (1.0.x) and its own merged changelog page; it is not part of the OMT changelog.
-Its two branches share one changelog history (entries up to 1.0.0-beta.5 are the 1.20.1+ releases, beta.6 is the first 1.12.2 build), and each branch adds its own releases:
+Its two branches share one changelog history (entries up to 1.0.0-beta.5 are the 1.20.1/1.21.1 releases, beta.6 is the first 1.12.2 build), and each branch adds its own releases:
 
 | Version line | Folder | Changelog |
 | --- | --- | --- |
 | 1.12.2 (Forge, needs OMLib) | `../OMTTeam1.12/OpenModularLighting` (branch `1.12`) | `CHANGELOG.md` (entries start with "Forge 1.12.2:") |
-| 1.20.1+ | `../OpenModularLighting` (branch `1.20.1+`) | `CHANGELOG.md` |
+| 1.20.1, 1.21.1 and 1.21.11 | `../OpenModularLighting` (branch `1.20.1+`) | `CHANGELOG.md` |
 
 Each changelog follows Keep a Changelog (`## [version] - date`, sections Added, Changed, Fixed, Removed, and `## [Unreleased]`).
 Read the version and date of the latest release from these headings, not from git tags.
@@ -38,9 +38,10 @@ When a mod releases, update it like this:
    - An entry that describes the same change on both version lines gets **one** line without prefix.
      Check the source code of both workspaces when the wording differs but the change may be the same (the core logic is shared, e.g. `core/turret/RayMath.java`).
    - OML: the 1.12.2 branch is a port with the same `core/` and `config/` code, so a feature of the shared history counts for both lines when the 1.12.2 source has it; only loader-specific lines (Jade/Hwyla, energy API, OMLib, disguise menu) get a prefix.
-   - Otherwise the line starts with `**1.12.2 only:**` or `**1.20.1+ only:**`.
+   - Otherwise the line starts with `**1.12.2 only:**` or, for the modern versions, `**1.20.1/1.21.1 only:**` on the OMT page and `**1.20.1/1.21.1/1.21.11 only:**` on the OML page.
+     Do not write "1.20.1+" on the site: name the supported Minecraft versions.
    - 1.12.2 entries from OMLib or OMPD start with `**1.12.2 only** · _OMLib_:` or `**1.12.2 only** · _OMPD_:`.
-   - Order inside a section: shared lines first, then `1.12.2 only`, then `1.20.1+ only`.
+   - Order inside a section: shared lines first, then `1.12.2 only`, then the modern versions' prefix.
 4. Merge, don't append: when a later release changes or undoes an earlier entry, write the final state once (e.g. "Relativistic Turret renamed internally" + "renamed in all languages" → one line).
    Drop entries that a later release made obsolete (e.g. "Not yet implemented: camo" once camo was added).
    Fixes of bugs that only existed in earlier pre-releases stay, with their prefix.

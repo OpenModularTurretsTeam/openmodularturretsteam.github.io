@@ -5,19 +5,19 @@ permalink: /changelog/4.0.0/
 ---
 
 This is the full changelog of **Open Modular Turrets 4.0.0**, merged from all of its alpha and beta releases.
-For 1.12.2 it also covers **OMLib** and **Open Modular Passive Defense (OMPD)** 4.0.0, which are part of Open Modular Turrets on 1.20.1+.
+For 1.12.2 it also covers **OMLib** and **Open Modular Passive Defense (OMPD)** 4.0.0, which are part of Open Modular Turrets on 1.20.1 and 1.21.1.
 
 The current pre-releases are:
 
 | Minecraft | Loaders | Mods | Latest |
 | --- | --- | --- | --- |
 | 1.12.2 | Forge | OMT, OMLib, OMPD | 4.0.0-beta.3 (2026-10-26) |
-| 1.20.1+ | Fabric 1.20.1 and 1.21.1, NeoForge 1.21.1, Forge 1.20.1 | OMT (OMPD and OMLib included) | 4.0.0-beta.9 (2026-10-25) |
+| 1.20.1 and 1.21.1 | Fabric 1.20.1 and 1.21.1, NeoForge 1.21.1, Forge 1.20.1 | OMT (OMPD and OMLib included) | 4.0.0-beta.9 (2026-10-25) |
 
 **How to read this page:**
 a line without a prefix is a change in both versions.
-**1.12.2 only** or **1.20.1+ only** marks a change made in just that version.
-That does not always mean the other version lacks the feature: 1.20.1+ is a port of 1.12.2, and some of its lines only catch up with 1.12.2.
+**1.12.2 only** or **1.20.1/1.21.1 only** marks a change made in just that version.
+That does not always mean the other version lacks the feature: the 1.20.1/1.21.1 version is a port of 1.12.2, and some of its lines only catch up with 1.12.2.
 On 1.12.2, _OMLib_ or _OMPD_ after the prefix names the mod that changed; the other lines are OMT.
 
 ## Before you update
@@ -25,15 +25,15 @@ On 1.12.2, _OMLib_ or _OMPD_ after the prefix names the mod that changed; the ot
 - **1.12.2 only:** OMT and OMPD 4.0.0-beta.3 require OMLib 4.0.0-beta.3 or newer
 - **1.12.2 only:** inventory and power expanders, the loot deleter addon and _OMLib_'s network cable disappear from your world, the expanders together with the items in them; placed 3.x power generators become generators and keep their fuel
 - **1.12.2 only:** the Relativistic Turret becomes the Slowing Turret; placed turrets, items and its config section are converted
-- **1.20.1+ only:** Relativistic Turrets placed with 4.0.0-alpha.1 to 4.0.0-beta.2 disappear (renamed to Slowing Turret in beta.3); resource packs replacing its sound need the new name `openmodularturrets:slowing`
+- **1.20.1/1.21.1 only:** Relativistic Turrets placed with 4.0.0-alpha.1 to 4.0.0-beta.2 disappear (renamed to Slowing Turret in beta.3); resource packs replacing its sound need the new name `openmodularturrets:slowing`
 
 ## Added
 
 ### Versions and loaders
 
-- **1.20.1+ only:** Open Modular Turrets for Fabric 1.20.1 and 1.21.1 (since alpha.1), NeoForge 1.21.1 and Forge 1.20.1 (since beta.6), with all turrets, projectiles, ammo, upgrades and addons from Open Modular Turrets 3.2 (1.12.2) and turret bases (tiers 1–5) with GUI, trusted players and access levels
-- **1.20.1+ only:** Open Modular Passive Defense's hardened blocks, walls, fences and the camouflage trap are part of the mod; OMLib is not needed
-- **1.20.1+ only:** energy via Team Reborn Energy on Fabric and the loader's energy capability on NeoForge and Forge
+- **1.20.1/1.21.1 only:** Open Modular Turrets for Fabric 1.20.1 and 1.21.1 (since alpha.1), NeoForge 1.21.1 and Forge 1.20.1 (since beta.6), with all turrets, projectiles, ammo, upgrades and addons from Open Modular Turrets 3.2 (1.12.2) and turret bases (tiers 1–5) with GUI, trusted players and access levels
+- **1.20.1/1.21.1 only:** Open Modular Passive Defense's hardened blocks, walls, fences and the camouflage trap are part of the mod; OMLib is not needed
+- **1.20.1/1.21.1 only:** energy via Team Reborn Energy on Fabric and the loader's energy capability on NeoForge and Forge
 
 ### Turrets
 
@@ -41,48 +41,48 @@ On 1.12.2, _OMLib_ or _OMPD_ after the prefix names the mod that changed; the ot
 - Holding a turret while looking at a block next to a turret base outlines where it would go: cyan if it can be placed there, red with a short reason if not (block in the way, wrong side, base tier too low, base full, too many of this turret)
 - Turret tooltips (with shift): what the turret does, the base tier it needs, its ammo and its energy per shot
 - **1.12.2 only:** turrets that ignore Scatter Shot upgrades say so in their tooltip without shift
-- **1.20.1+ only:** crafting recipes for the Melee, Crossbow, Arc and Plasma Turrets
-- **1.20.1+ only:** the Potato Cannon Turret can also fire poisonous potatoes
+- **1.20.1/1.21.1 only:** crafting recipes for the Melee, Crossbow, Arc and Plasma Turrets
+- **1.20.1/1.21.1 only:** the Potato Cannon Turret can also fire poisonous potatoes
 
 ### Turret bases, energy and upgrades
 
 - Generator: burns furnace fuel into energy for adjacent turret bases, with 9 fuel slots and an upgrade slot for the new Energy Multiplier Upgrade (up to 4, each doubles energy production and fuel use; the energy per fuel item stays the same)
-- **1.20.1+ only:** the Generator stores 1,000,000 RF, puts out up to 65,536 RF/t and also powers other energy acceptors; config files still on the old defaults (50,000 RF, 200 RF/t) are updated
-- **1.20.1+ only:** upgrade tooltips show which machine the upgrade fits into (turret base or generator)
-- **1.20.1+ only:** Creative Upgrade: fills the base's energy storage and removes the ammo usage of its turrets (placeholder texture)
-- **1.20.1+ only:** the crank plays its windup sound when it charges a tier 1 base
+- **1.20.1/1.21.1 only:** the Generator stores 1,000,000 RF, puts out up to 65,536 RF/t and also powers other energy acceptors; config files still on the old defaults (50,000 RF, 200 RF/t) are updated
+- **1.20.1/1.21.1 only:** upgrade tooltips show which machine the upgrade fits into (turret base or generator)
+- **1.20.1/1.21.1 only:** Creative Upgrade: fills the base's energy storage and removes the ammo usage of its turrets (placeholder texture)
+- **1.20.1/1.21.1 only:** the crank plays its windup sound when it charges a tier 1 base
 
 ### Ownership
 
-- Right-clicking a turret base, turret, camouflage trap or hardened block/wall/fence without an owner claims it and the unowned blocks connected to it (up to `claimSpreadLimit`, default 1024); machines' fake players only claim if `fakePlayersCanClaim` is set. On 1.12.2 these options are in _OMLib_'s config, on 1.20.1+ they are `bases.claimSpreadLimit` and `general.fakePlayersCanClaim`
+- Right-clicking a turret base, turret, camouflage trap or hardened block/wall/fence without an owner claims it and the unowned blocks connected to it (up to `claimSpreadLimit`, default 1024); machines' fake players only claim if `fakePlayersCanClaim` is set. On 1.12.2 these options are in _OMLib_'s config, on 1.20.1/1.21.1 they are `bases.claimSpreadLimit` and `general.fakePlayersCanClaim`
 - Ownership Wand (creative, operators only) for mapmakers: right-click makes you the owner of an owned block, sneak-right-click removes its owner; it spreads to the connected blocks of the same owner unless switched off with a sneak-right-click into the air (on 1.12.2 part of _OMLib_)
 - While you hold the Ownership Wand, turrets still target and fire at you, but their shots, explosions and effects do not affect you
 - The owner of a turret base ("Disown" in its configure screen) or camouflage trap (camouflage menu) can disown it after a confirmation; the trust list is cleared and anyone can claim it
 - Turret bases, their turrets and hardened blocks/walls/fences without an owner sparkle green
 - **1.12.2 only:** WAILA/HWYLA and The One Probe show "Owner: nobody (right-click to claim)"
-- **1.20.1+ only:** Jade shows "Owner: nobody (right-click to claim)"; hardened blocks, walls and fences now show their owner in Jade
+- **1.20.1/1.21.1 only:** Jade shows "Owner: nobody (right-click to claim)"; hardened blocks, walls and fences now show their owner in Jade
 
 ### Camouflage, trust and memory card
 
 - Camouflage menu for turret bases and camouflage traps: a disguise slot (click with a block to set it, empty-handed to reset) and, on tier 4 and 5 bases and the camouflage trap, light value and light opacity sliders
 - **1.12.2 only:** the camouflage menu of a turret base is under Configure → Camouflage; admins of a camouflage trap open its menu by right-clicking it (sneaking skips it)
-- **1.20.1+ only:** turret bases and camouflage traps can be camouflaged as any full block, opaque or transparent; the camouflage of the camouflage trap is drawn like a real block (ambient occlusion, transparent blocks, biome-blended grass and leaf colours)
+- **1.20.1/1.21.1 only:** turret bases and camouflage traps can be camouflaged as any full block, opaque or transparent; the camouflage of the camouflage trap is drawn like a real block (ambient occlusion, transparent blocks, biome-blended grass and leaf colours)
 - Camouflage traps have a trusted player list: the owner and trusted players can stand on the trap, its admins open its menus and manage the list (Trusted button in the camouflage menu; levels "trusted" and "admin")
 - Memory card: sneak + right-click a turret base or camouflage trap to store its settings, right-click another one to write them; it stores targeting, mode, trust list, disguise and light (traps: trust list, disguise and light), needs admin access for both, and its tooltip lists what it holds
 - **1.12.2 only:** the memory card is now called OM Memory Card; 3.x cards still work, and sneak-clicking anything else clears it
-- **1.20.1+ only:** the Turret Memory Card is craftable
+- **1.20.1/1.21.1 only:** the Turret Memory Card is craftable
 
 ### Mod compatibility
 
-- **1.20.1+ only:** Jade tooltips for turret bases (mode, active, owner) and turrets (active, owner and, for players who may open the base: ammo, damage boost, accuracy, rate of fire)
-- **1.20.1+ only:** Sable contraptions (1.21.1): turret bases and turrets on a contraption find, aim at and shoot targets in the world around it; projectiles take the contraption's speed with them
-- **1.20.1+ only:** Create contraptions and Create Aeronautics' Physics Assembler (NeoForge 1.21.1) can move turret bases and turrets; config option `bases.allowContraptionMovement` (default true)
+- **1.20.1/1.21.1 only:** Jade tooltips for turret bases (mode, active, owner) and turrets (active, owner and, for players who may open the base: ammo, damage boost, accuracy, rate of fire)
+- **1.20.1/1.21.1 only:** Sable contraptions (1.21.1): turret bases and turrets on a contraption find, aim at and shoot targets in the world around it; projectiles take the contraption's speed with them
+- **1.20.1/1.21.1 only:** Create contraptions and Create Aeronautics' Physics Assembler (NeoForge 1.21.1) can move turret bases and turrets; config option `bases.allowContraptionMovement` (default true)
 
 ### Config
 
 - Config option `turrets.dropTurretsOverMaxSimultaneous` (default false): attached turrets over their type's `maxSimultaneous` drop, e.g. after the limit was lowered
 - **1.12.2 only:** the server sends its config values (OMT's `openmodularturrets.cfg` and `openmodularturrets_addon_turrets.cfg`, _OMLib_'s `omlib.cfg`) to clients when they join, so tooltips, ammo slots, the turret placement outline and GUIs follow the server's rules; after leaving, the client uses its own config again
-- **1.20.1+ only:** the config file is documented: every key has a comment with its description, range and default
+- **1.20.1/1.21.1 only:** the config file is documented: every key has a comment with its description, range and default
 
 ## Changed
 
@@ -99,8 +99,8 @@ On 1.12.2, _OMLib_ or _OMPD_ after the prefix names the mod that changed; the ot
 - **1.12.2 only:** pets of players in the owner's scoreboard team are no longer targeted, and team members no longer get turret warnings
 - **1.12.2 only:** pets are protected by the trust list of their owner also while the owner is offline
 - **1.12.2 only** · _OMLib_: members of the owner's scoreboard team count as trusted (lowest access level) for owned blocks
-- **1.20.1+ only:** projectile turrets aim at the target's eyes instead of its body when a ledge hides the body
-- **1.20.1+ only:** turret hits no longer knock their targets back
+- **1.20.1/1.21.1 only:** projectile turrets aim at the target's eyes instead of its body when a ledge hides the body
+- **1.20.1/1.21.1 only:** turret hits no longer knock their targets back
 
 ### Turrets
 
@@ -112,9 +112,9 @@ On 1.12.2, _OMLib_ or _OMPD_ after the prefix names the mod that changed; the ot
 - **1.12.2 only:** melee turrets on the sides of a base drop as items
 - **1.12.2 only:** the Arc Turret can be placed on every side of a base, not only on top
 - **1.12.2 only:** the particles of the Teleporter Turret are shown in multiplayer too
-- **1.20.1+ only:** the Arc Turret chains a bit farther and bounces up to two times
-- **1.20.1+ only:** the Crossbow Turret fires the new Crossbow Bolt ammo (iron ingot, stick, feather) instead of vanilla arrows (placeholder texture)
-- **1.20.1+ only:** the grenade flies for 1.5 seconds instead of 2 and explodes 4 ticks after hitting a valid enemy
+- **1.20.1/1.21.1 only:** the Arc Turret chains a bit farther and bounces up to two times
+- **1.20.1/1.21.1 only:** the Crossbow Turret fires the new Crossbow Bolt ammo (iron ingot, stick, feather) instead of vanilla arrows (placeholder texture)
+- **1.20.1/1.21.1 only:** the grenade flies for 1.5 seconds instead of 2 and explodes 4 ticks after hitting a valid enemy
 
 ### Turret bases, addons and energy
 
@@ -144,12 +144,12 @@ On 1.12.2, _OMLib_ or _OMPD_ after the prefix names the mod that changed; the ot
 - License: the source code is now MIT (was GPLv3) and the art CC BY-NC-SA 4.0
 - **1.12.2 only:** `turretBreakable` makes turrets mineable with a pickaxe (hardness 3, needs a restart)
 - The jar files are named `<mod>-<version>-mc<minecraft version>-<loader>.jar` (`openmodularturrets`; on 1.12.2 also `omlib` and `ompd`)
-- **1.20.1+ only:** releases on CurseForge and Modrinth are titled like the jar file
-- **1.20.1+ only:** German and English (UK) translations completed
+- **1.20.1/1.21.1 only:** releases on CurseForge and Modrinth are titled like the jar file
+- **1.20.1/1.21.1 only:** German and English (UK) translations completed
 
 ## Removed
 
-- **1.12.2 only:** inventory and power expanders: they disappear from worlds, together with the items in them (they were not ported to 1.20.1+ either)
+- **1.12.2 only:** inventory and power expanders: they disappear from worlds, together with the items in them (they were not ported to 1.20.1 and 1.21.1 either)
 - **1.12.2 only:** the loot deleter base addon (turret kills drop nothing without a fake drops addon now); placed loot deleters disappear
 - **1.12.2 only:** the power generator attachment (it had no function); the Generator replaces it
 - **1.12.2 only:** the config options `doTurretsKillsDropMobLoot` and `doLootAddonsOverrideMobLootSetting`
@@ -207,24 +207,24 @@ On 1.12.2, _OMLib_ or _OMPD_ after the prefix names the mod that changed; the ot
 - **1.12.2 only** · _OMPD_: sneak-right-clicking your own block with an empty hand did not always pick it up
 - **1.12.2 only** · _OMPD_: the creative tab showed its translation key instead of its name
 - **1.12.2 only** · _OMPD_: WAILA/HWYLA showed no owner name for hardened blocks, walls and fences
-- **1.20.1+ only:** shift-clicking addons and upgrades into a turret base no longer ignores their slot stack limit
-- **1.20.1+ only:** projectiles now properly apply on-hit effects on their motion, and grenades no longer hurl away when they hit entities
-- **1.20.1+ only:** Potato Cannon and Disposable Turret projectiles are visible right at the turret instead of a few blocks away, and show a potato or cobblestone when fired without ammo (Creative Upgrade)
-- **1.20.1+ only:** turret projectiles that flew into a chunk without entity ticking froze there; they remove themselves now, as in 1.12.2
-- **1.20.1+ only:** on the very first start (no config file yet), the disposable ammo list and the entity black and force lists were ignored until the next restart
-- **1.20.1+ only:** the Redstone Reactor addon burns a redstone block or dust when its energy fits the free storage exactly; before, it needed more room than that
-- **1.20.1+ only:** the English (UK) Turret Limit label was broken
-- **1.20.1+ only:** the mod metadata named the wrong license (GPL-3.0); the jar now contains all three license files
-- **1.20.1+ only:** turret bases and generators no longer drop a second copy of their items when they are moved or replaced without breaking (`/setblock`, mods that move blocks)
-- **1.20.1+ only:** turrets also turn with rotated or mirrored structures, and turrets, cranks and generators with moved blocks, so turrets and cranks stay attached to their base
-- **1.20.1+ only:** adding a trusted player by a name the server does not know no longer freezes the server while the name is looked up at Mojang
-- **1.20.1+ only:** "Drop turrets" only breaks blocks that are still turrets
+- **1.20.1/1.21.1 only:** shift-clicking addons and upgrades into a turret base no longer ignores their slot stack limit
+- **1.20.1/1.21.1 only:** projectiles now properly apply on-hit effects on their motion, and grenades no longer hurl away when they hit entities
+- **1.20.1/1.21.1 only:** Potato Cannon and Disposable Turret projectiles are visible right at the turret instead of a few blocks away, and show a potato or cobblestone when fired without ammo (Creative Upgrade)
+- **1.20.1/1.21.1 only:** turret projectiles that flew into a chunk without entity ticking froze there; they remove themselves now, as in 1.12.2
+- **1.20.1/1.21.1 only:** on the very first start (no config file yet), the disposable ammo list and the entity black and force lists were ignored until the next restart
+- **1.20.1/1.21.1 only:** the Redstone Reactor addon burns a redstone block or dust when its energy fits the free storage exactly; before, it needed more room than that
+- **1.20.1/1.21.1 only:** the English (UK) Turret Limit label was broken
+- **1.20.1/1.21.1 only:** the mod metadata named the wrong license (GPL-3.0); the jar now contains all three license files
+- **1.20.1/1.21.1 only:** turret bases and generators no longer drop a second copy of their items when they are moved or replaced without breaking (`/setblock`, mods that move blocks)
+- **1.20.1/1.21.1 only:** turrets also turn with rotated or mirrored structures, and turrets, cranks and generators with moved blocks, so turrets and cranks stay attached to their base
+- **1.20.1/1.21.1 only:** adding a trusted player by a name the server does not know no longer freezes the server while the name is looked up at Mojang
+- **1.20.1/1.21.1 only:** "Drop turrets" only breaks blocks that are still turrets
 
 ## For mod and addon developers
 
 - Turret API: other mods can add turrets with their own weapons, ammo and models, and custom logic: self-targeting weapons find their own targets, projectile and ray weapons can run code when they hit an entity, and `OMTApi.canDamage` / `OMTApi.hurt` apply the base's trust and damage rules; plugins are marked with `@OMTPlugin.Register` / `@OMTClientPlugin.Register`. See `docs/turret-api.md` in the mod's repository
 - **1.12.2 only:** added turrets get their config in `config/openmodularturrets_addon_turrets.cfg`
-- **1.20.1+ only:** added turrets get their config entries under `turrets.addon_turrets`; on Fabric, plugins use the `openmodularturrets` entrypoint instead of the annotations
+- **1.20.1/1.21.1 only:** added turrets get their config entries under `turrets.addon_turrets`; on Fabric, plugins use the `openmodularturrets` entrypoint instead of the annotations
 - **1.12.2 only:** removed the base controller API (`IBaseController`, `ILaserController`) of the discontinued OMTControl addon
 - **1.12.2 only:** removed the entity and ammo lists of the 3.x API (`api.lists`); they no longer affected targeting (the config lists and the disposable ammo allow list stay)
 - **1.12.2 only** · _OMLib_: the client-only GUI and render helpers moved from `omtteam.omlib.api.gui` / `api.render` to `omtteam.omlib.client.gui` / `client.render` (`ColorOM`, `ICamoSupport` and `RenderBlockStateContainer` stay)
@@ -244,16 +244,16 @@ These changes are done but not released yet.
 
 ### Changed
 
-- **1.20.1+ only:** the camouflage menu has a dark grey background like the turret base GUI instead of the vanilla light grey (1.12.2 has this since 4.0.0-beta.3)
-- **1.20.1+ only:** the generator GUI labels are black like in the other turret GUIs (1.12.2 has this since 4.0.0-beta.3)
+- **1.20.1/1.21.1 only:** the camouflage menu has a dark grey background like the turret base GUI instead of the vanilla light grey (1.12.2 has this since 4.0.0-beta.3)
+- **1.20.1/1.21.1 only:** the generator GUI labels are black like in the other turret GUIs (1.12.2 has this since 4.0.0-beta.3)
 
 ### Fixed
 
-- **1.20.1+ only:** a turret base placed without saved data (e.g. by `/setblock` or a structure) with turrets already attached no longer starts with range 0; it starts at the range of its shortest reaching turret (1.12.2 has this fix since 4.0.0-beta.2)
+- **1.20.1/1.21.1 only:** a turret base placed without saved data (e.g. by `/setblock` or a structure) with turrets already attached no longer starts with range 0; it starts at the range of its shortest reaching turret (1.12.2 has this fix since 4.0.0-beta.2)
 
 ## Release history
 
-| Version | 1.12.2 (OMT, OMLib, OMPD) | 1.20.1+ |
+| Version | 1.12.2 (OMT, OMLib, OMPD) | 1.20.1/1.21.1 |
 | --- | --- | --- |
 | 4.0.0-alpha.1 | 2026-10-23 | 2026-10-12 |
 | 4.0.0-alpha.2 | 2026-10-23 | 2026-10-13 |
@@ -270,7 +270,7 @@ These changes are done but not released yet.
 | 4.0.0-beta.9 | | 2026-10-25 |
 
 The changelogs of the single releases are in the mods' repositories:
-[OpenModularTurrets 1.20.1+](https://github.com/OpenModularTurretsTeam/OpenModularTurrets/blob/1.20.1%2B/CHANGELOG.md),
+[OpenModularTurrets 1.20.1/1.21.1](https://github.com/OpenModularTurretsTeam/OpenModularTurrets/blob/1.20.1%2B/CHANGELOG.md),
 [OpenModularTurrets 1.12.2](https://github.com/OpenModularTurretsTeam/OpenModularTurrets/blob/1.12/CHANGELOG.md),
 [OMLib 1.12.2](https://github.com/OpenModularTurretsTeam/OMLib/blob/1.12/CHANGELOG.md),
 [OpenModularPassiveDefense 1.12.2](https://github.com/OpenModularTurretsTeam/OpenModularPassiveDefense/blob/1.12/CHANGELOG.md).

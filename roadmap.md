@@ -8,9 +8,9 @@ Here is the state of our mods and the changes planned for them.
 
 ## __OpenModularTurrets__
 
-### _v4.0.x_ (in beta, for _1.12.2_ and _1.20.1+_)
+### _v4.0.x_ (in beta, for _1.12.2_, _1.20.1_ and _1.21.1_)
 
-Released as betas: 4.0.0-beta.3 for 1.12.2 (Forge), 4.0.0-beta.9 for 1.20.1+ (Fabric 1.20.1 and 1.21.1, NeoForge 1.21.1, Forge 1.20.1).
+Released as betas: 4.0.0-beta.3 for 1.12.2 (Forge), 4.0.0-beta.9 for 1.20.1 and 1.21.1 (Fabric 1.20.1 and 1.21.1, NeoForge 1.21.1, Forge 1.20.1).
 See the [full 4.0.0 changelog](/changelog/4.0.0/).
 
 - _Add_: 1.20.1 and 1.21.1 versions (Fabric, NeoForge 1.21.1, Forge 1.20.1), with OMPD's blocks included and without OMLib (__done__)
@@ -20,7 +20,7 @@ See the [full 4.0.0 changelog](/changelog/4.0.0/).
 - _Add_: trusted players for camouflage traps (__done__)
 - _Add_: Turret API for other mods (__done__)
 - _Add_: Melee, Crossbow, Arc and Plasma Turrets (__done__)
-- _Add_: Jade, Sable and Create compatibility on 1.20.1+ (__done__)
+- _Add_: Jade, Sable and Create compatibility on 1.20.1 and 1.21.1 (__done__)
 - _Add_: claiming unowned blocks, disowning bases and an Ownership Wand for mapmakers (__done__)
 - _Change_: new targeting and aiming system for turrets (__done__)
 - _Change_: Relativistic Turret becomes the Slowing Turret (__done__)
@@ -56,7 +56,7 @@ These were on the old 4.0 roadmap and did not make it into 4.0.0.
 
 ## __OMLib__ (_1.12.2_ only)
 
-On 1.20.1+, Open Modular Turrets does not need OMLib.
+On 1.20.1 and 1.21.1, Open Modular Turrets does not need OMLib.
 
 ### _v4.0.x_ (in beta)
 
@@ -76,7 +76,7 @@ On 1.20.1+, Open Modular Turrets does not need OMLib.
 
 ## __OpenModularPassiveDefense__
 
-On 1.20.1+, its blocks are part of Open Modular Turrets.
+On 1.20.1 and 1.21.1, its blocks are part of Open Modular Turrets.
 
 ### _v4.0.x_ (in beta, for _1.12.2_)
 
@@ -87,10 +87,10 @@ On 1.20.1+, its blocks are part of Open Modular Turrets.
 
 ## __OpenModularLighting__
 
-### _v1.0.x_ (in beta, for _1.12.2_ and _1.20.1+_)
+### _v1.0.x_ (in beta, for _1.12.2_, _1.20.1_, _1.21.1_ and _1.21.11_)
 
 Floodlights, a port of the 1.7.10 _FloodLights_ mod.
-Released as betas: 1.0.0-beta.7 for 1.12.2 (Forge, needs OMLib 4.0.0-beta.2 or newer), 1.0.0-beta.8 for 1.20.1+ (Fabric 1.20.1, 1.21.1 and 1.21.11, NeoForge 1.21.1 and 1.21.11, Forge 1.20.1).
+Released as betas: 1.0.0-beta.7 for 1.12.2 (Forge, needs OMLib 4.0.0-beta.2 or newer), 1.0.0-beta.8 for 1.20.1, 1.21.1 and 1.21.11 (Fabric 1.20.1, 1.21.1 and 1.21.11, NeoForge 1.21.1 and 1.21.11, Forge 1.20.1).
 See the [full 1.0.0 changelog](/changelog/oml-1.0.0/).
 
 #### Ported from the 1.7.10 _FloodLights_ mod
@@ -113,7 +113,7 @@ See the [full 1.0.0 changelog](/changelog/oml-1.0.0/).
 - _Add_: hints in the GUI and in chat for the delay before a light turns on again (__done__)
 - _Add_: Fabric, NeoForge and Forge versions for 1.20.1 and 1.21.1, and a Forge version for 1.12.2 (__done__)
 - _Add_: port to Minecraft 1.21.11, for both Fabric and NeoForge (__done__)
-- _Add_: Jade (1.20.1+) and Hwyla (1.12.2) tooltips showing a light's mode and invert (__done__)
+- _Add_: Jade (1.20.1, 1.21.1 and 1.21.11) and Hwyla (1.12.2) tooltips showing a light's mode and invert (__done__)
 - _Add_: a documented JSON config that the server sends to the players, and that updates itself to new defaults (__done__)
 
 #### Changed since

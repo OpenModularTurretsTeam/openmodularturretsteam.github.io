@@ -22,14 +22,14 @@ Grab the latest stable releases from this project page, and the dev builds from 
 
 ## News:
 
-#### Update 4.0.0 (**in beta**, for _1.12.2_ and _1.20.1+_):
+#### Update 4.0.0 (**in beta**, for _1.12.2_, _1.20.1_ and _1.21.1_):
 - _Add_: 1.20.1 and 1.21.1 versions (Fabric, NeoForge 1.21.1, Forge 1.20.1)
 - _Add_: Generator with Energy Multiplier Upgrades
 - _Add_: camouflage menu with light settings for turret bases and camouflage traps
 - _Add_: memory card that copies the settings of bases and camouflage traps
 - _Add_: trusted players for camouflage traps
 - _Add_: Turret API for other mods
-- _Add_: Jade tooltips and Sable/Create contraption support (1.20.1+)
+- _Add_: Jade tooltips and Sable/Create contraption support (1.20.1 and 1.21.1)
 - _Add_: claiming blocks without an owner and an Ownership Wand for mapmakers
 - _Change_: new targeting and aiming system for turrets
 - _Change_: the Relativistic Turret is now the Slowing Turret
