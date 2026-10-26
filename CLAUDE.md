@@ -55,7 +55,10 @@ When a mod releases, update it like this:
   Alpha and beta releases get no post: update the changelog pages, the roadmap and the CurseForge description instead.
 - A post goes in `_posts/YYYY-MM-DD-<slug>.markdown` (front matter `layout: post`, `categories: update`) with the highlights and a link to the merged changelog.
   Keep the post date in the past (Jekyll does not publish future posts).
-- The header menu shows only the pages listed in `header_pages` in `_config.yml`; add a new page (e.g. the changelog of a new major version) there.
+- The header menu shows only what `header_menu` in `_config.yml` lists: page paths, and dropdowns with a `title` and `pages` (rendered by `_includes/header.html`, an override of minima's header; styles in `assets/main.scss`).
+  Add a new page there; a new changelog page goes into the "Changelogs" dropdown.
+- Dark theme: optional, follows the system setting unless the visitor picks Light or Dark with the "Theme" button in the header (saved in `localStorage`, applied early by `_includes/head.html`).
+  The colours are in `assets/main.scss` (`dark-theme` mixin); a new element with its own colours needs a dark variant there.
 - `roadmap.md` and `curseforge-description-omt.md` list the state per version (`(**done**)`, `(**WIP**)`); update them to match the changelogs.
 
 ## Build

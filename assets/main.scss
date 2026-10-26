@@ -1,0 +1,211 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@import "minima";
+
+/**
+ * Dropdowns in the header menu (see _includes/header.html)
+ */
+.site-nav {
+  .nav-dropdown {
+    position: relative;
+    display: inline-block;
+
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+
+  .nav-dropdown .nav-dropdown-title {
+    margin-right: 0;
+    cursor: pointer;
+
+    &::after {
+      content: " \25BE";
+    }
+  }
+
+  .nav-dropdown-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    z-index: 10;
+    min-width: 100%;
+    padding: 5px 0;
+    background-color: $background-color;
+    border: 1px solid $grey-color-light;
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    white-space: nowrap;
+    text-align: left;
+
+    .page-link {
+      display: block;
+      margin: 0;
+      padding: 5px 15px;
+      line-height: $base-line-height * $base-font-size * 1.5;
+    }
+  }
+
+  .nav-dropdown:hover .nav-dropdown-menu,
+  .nav-dropdown:focus-within .nav-dropdown-menu {
+    display: block;
+  }
+
+  // Phones: inside the hamburger menu, the dropdown's pages are always shown, indented below its title
+  @include media-query($on-palm) {
+    .nav-dropdown {
+      display: block;
+
+      &:not(:last-child) {
+        margin-right: 0;
+      }
+    }
+
+    .nav-dropdown .nav-dropdown-title {
+      display: block;
+      margin-left: 20px;
+      padding: 5px 10px;
+      color: $grey-color;
+      cursor: default;
+
+      &::after {
+        content: "";
+      }
+    }
+
+    .nav-dropdown-menu {
+      display: block;
+      position: static;
+      padding: 0;
+      border: 0;
+      box-shadow: none;
+      text-align: right;
+
+      .page-link {
+        margin-left: 20px;
+        padding: 5px 25px 5px 10px;
+        line-height: $base-line-height;
+      }
+    }
+  }
+}
+
+/**
+ * Theme toggle button (see _includes/header.html)
+ */
+.site-nav .theme-toggle {
+  background: none;
+  border: 0;
+  padding: 0;
+  font: inherit;
+  line-height: $base-line-height;
+  color: $text-color;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  @include media-query($on-palm) {
+    width: 100%;
+    text-align: right;
+    margin-left: 0;
+  }
+}
+
+/**
+ * Dark theme: used when the visitor picks "Dark", or when the system prefers dark and the visitor did not pick "Light"
+ */
+@mixin dark-theme {
+  color-scheme: dark;
+
+  body {
+    color: #e4e4e4;
+    background-color: #181a1b;
+  }
+
+  a {
+    color: #6cb0ff;
+
+    &:visited { color: #b49cf0; }
+    &:hover { color: #fff; }
+  }
+
+  blockquote { color: #a0a0a0; border-left-color: #3a3d3f; }
+
+  pre, code {
+    background-color: #25282a;
+    border-color: #3a3d3f;
+  }
+
+  .svg-icon { fill: #a0a0a0; }
+
+  table {
+    color: #cfcfcf;
+    border-color: #3a3d3f;
+
+    tr:nth-child(even) { background-color: #1f2123; }
+
+    th {
+      background-color: #26292b;
+      border-color: #3a3d3f;
+    }
+
+    td { border-color: #3a3d3f; }
+  }
+
+  .site-header {
+    border-top-color: #6cb0ff;
+    border-bottom-color: #3a3d3f;
+  }
+
+  .site-title, .site-title:visited { color: #e4e4e4; }
+
+  .site-nav {
+    .page-link { color: #e4e4e4; }
+    .menu-icon > svg { fill: #e4e4e4; }
+    .theme-toggle { color: #e4e4e4; }
+    .nav-dropdown .nav-dropdown-title { color: #e4e4e4; }
+    .nav-dropdown-menu {
+      background-color: #202223;
+      border-color: #3a3d3f;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+    }
+
+    @include media-query($on-palm) {
+      background-color: #202223;
+      border-color: #3a3d3f;
+
+      .nav-dropdown .nav-dropdown-title { color: #a0a0a0; }
+      .nav-dropdown-menu { background-color: transparent; box-shadow: none; }
+    }
+  }
+
+  .site-footer { border-top-color: #3a3d3f; }
+  .footer-col-wrapper, .post-meta { color: #a0a0a0; }
+
+  .highlight {
+    background: #25282a;
+
+    .c, .cm, .c1, .cs { color: #8a9199; }
+    .k, .kc, .kd, .kn, .kp, .kr, .o, .ow { color: #e4e4e4; }
+    .s, .sb, .sc, .sd, .s2, .se, .sh, .si, .sx, .s1 { color: #f08a8a; }
+    .m, .mf, .mh, .mi, .mo, .il { color: #6fd3c8; }
+    .nf, .ne { color: #f0a0a0; }
+    .nc, .kt, .nn { color: #8ab4f0; }
+    .na, .nb, .no, .nv, .vc, .vg, .vi { color: #6fd3c8; }
+    .nt { color: #8ab4f0; }
+  }
+}
+
+:root[data-theme="dark"] {
+  @include dark-theme;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    @include dark-theme;
+  }
+}

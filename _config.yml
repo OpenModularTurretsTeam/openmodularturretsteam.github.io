@@ -19,11 +19,14 @@ description: >- # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
-# Pages in the header menu, in this order
-header_pages:
+# Header menu (see _includes/header.html), in this order:
+# a page path, or a dropdown with a title and its pages
+header_menu:
   - about.md
-  - changelog-4.0.0.md
-  - changelog-oml-1.0.0.md
+  - title: Changelogs
+    pages:
+      - changelog-4.0.0.md
+      - changelog-oml-1.0.0.md
   - roadmap.md
 
 # Build settings

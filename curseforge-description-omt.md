@@ -21,7 +21,6 @@ For **Modpack Creators**: You are free to put this mod and its companion mods in
 Grab the latest stable releases from this project page, and the dev builds from here: [Dev-Builds](https://jenkins.ironhide.de/job/OMTTeam/)
 
 ## News:
-We need _Coders_ for our mods. If you are interested write [Keridos](https://www.curseforge.com/members/keridos) a message or on our Discord and ping _@Keridos_ there.
 
 #### Update 4.0.0 (**in beta**, for _1.12.2_ and _1.20.1+_):
 - _Add_: 1.20.1 and 1.21.1 versions (Fabric, NeoForge 1.21.1, Forge 1.20.1)
