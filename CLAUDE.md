@@ -59,7 +59,8 @@ When a mod releases, update it like this:
   Add a new page there; a new changelog page goes into the "Changelogs" dropdown.
 - Dark theme: optional, follows the system setting unless the visitor picks Light or Dark with the "Theme" button in the header (saved in `localStorage`, applied early by `_includes/head.html`).
   The colours are in `assets/main.scss` (`dark-theme` mixin); a new element with its own colours needs a dark variant there.
-- `roadmap.md` and `curseforge-description-omt.md` list the state per version (`(**done**)`, `(**WIP**)`); update them to match the changelogs.
+- `roadmap.md` and `curseforge-description-omt.md` list the state per version; update them to match the changelogs.
+  The roadmap marks the state as `(__done__)` or `(__WIP__)`, with underscores for bold text, to keep markdown linting (MD050) quiet; the CurseForge description keeps `**` as it is written for CurseForge.
 
 ## Build
 
