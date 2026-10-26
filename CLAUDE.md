@@ -35,12 +35,12 @@ When a mod releases, update it like this:
    Sections, in order: Before you update, Added, Changed, Removed, Fixed, For mod and addon developers, Coming in the next pre-release, Release history.
    Added and Changed have topic subsections (Versions and loaders, Turrets, Targeting and aiming, Turret bases …); keep using them.
 3. Prefix:
-   - An entry that describes the same change on both version lines gets **one** line without prefix.
+   - An entry that describes the same change on both version lines gets __one__ line without prefix.
      Check the source code of both workspaces when the wording differs but the change may be the same (the core logic is shared, e.g. `core/turret/RayMath.java`).
    - OML: the 1.12.2 branch is a port with the same `core/` and `config/` code, so a feature of the shared history counts for both lines when the 1.12.2 source has it; only loader-specific lines (Jade/Hwyla, energy API, OMLib, disguise menu) get a prefix.
-   - Otherwise the line starts with `**1.12.2 only:**` or, for the modern versions, `**1.20.1/1.21.1 only:**` on the OMT page and `**1.20.1/1.21.1/1.21.11 only:**` on the OML page.
+   - Otherwise the line starts with `__1.12.2 only:__` or, for the modern versions, `__1.20.1/1.21.1 only:__` on the OMT page and `__1.20.1/1.21.1/1.21.11 only:__` on the OML page.
      Do not write "1.20.1+" on the site: name the supported Minecraft versions.
-   - 1.12.2 entries from OMLib or OMPD start with `**1.12.2 only** · _OMLib_:` or `**1.12.2 only** · _OMPD_:`.
+   - 1.12.2 entries from OMLib or OMPD start with `__1.12.2 only__ · _OMLib_:` or `__1.12.2 only__ · _OMPD_:`.
    - Order inside a section: shared lines first, then `1.12.2 only`, then the modern versions' prefix.
 4. Merge, don't append: when a later release changes or undoes an earlier entry, write the final state once (e.g. "Relativistic Turret renamed internally" + "renamed in all languages" → one line).
    Drop entries that a later release made obsolete (e.g. "Not yet implemented: camo" once camo was added).
@@ -49,6 +49,11 @@ When a mod releases, update it like this:
    A change released on one version line but still unreleased on the other is listed in the main sections with the released line's prefix and under "Coming" with the other's; once both are released, it becomes one line without prefix.
 6. Update the version table at the top and the Release history table (version, date per version line).
 7. Wording: one line per entry, written for players, close to the source entry; no trailing periods; mod developer API entries go under "For mod and addon developers".
+
+## Markdown style
+
+Write bold text with underscores (`__bold__`), never with stars (`**bold**`); italics also use underscores (`_italic_`).
+This keeps markdown linting (MD050) quiet.
 
 ## Other pages
 
@@ -61,7 +66,7 @@ When a mod releases, update it like this:
 - Dark theme: optional, follows the system setting unless the visitor picks Light or Dark with the "Theme" button in the header (saved in `localStorage`, applied early by `_includes/head.html`).
   The colours are in `assets/main.scss` (`dark-theme` mixin); a new element with its own colours needs a dark variant there.
 - `roadmap.md` and `curseforge-description-omt.md` list the state per version; update them to match the changelogs.
-  The roadmap marks the state as `(__done__)` or `(__WIP__)`, with underscores for bold text, to keep markdown linting (MD050) quiet; the CurseForge description keeps `**` as it is written for CurseForge.
+  They mark the state as `(__done__)` or `(__WIP__)`.
 
 ## Build
 

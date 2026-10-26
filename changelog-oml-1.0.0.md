@@ -4,7 +4,7 @@ title: OML Changelog 1.0.0
 permalink: /changelog/oml-1.0.0/
 ---
 
-This is the full changelog of **Open Modular Lighting (OML) 1.0.0**, merged from all of its alpha and beta releases.
+This is the full changelog of __Open Modular Lighting (OML) 1.0.0__, merged from all of its alpha and beta releases.
 OML brings floodlights, a port of the 1.7.10 mod _FloodLights_, to 1.12.2, 1.20.1, 1.21.1 and 1.21.11.
 
 The current pre-releases are:
@@ -14,17 +14,17 @@ The current pre-releases are:
 | 1.12.2 | Forge | OMLib 4.0.0-beta.2 or newer | 1.0.0-beta.7 (2026-10-26) |
 | 1.20.1, 1.21.1 and 1.21.11 | Fabric 1.20.1, 1.21.1 and 1.21.11, NeoForge 1.21.1 and 1.21.11, Forge 1.20.1 | Fabric API on Fabric | 1.0.0-beta.8 (2026-10-26) |
 
-**How to read this page:**
+__How to read this page:__
 a line without a prefix applies to both versions.
-**1.12.2 only** or **1.20.1/1.21.1/1.21.11 only** marks a change made in just that version.
+__1.12.2 only__ or __1.20.1/1.21.1/1.21.11 only__ marks a change made in just that version.
 The 1.12.2 version is a port of the 1.20.1/1.21.1/1.21.11 version and has its lights and features, so most lines apply to both.
 
 ## Added
 
 ### Versions and loaders
 
-- **1.20.1/1.21.1/1.21.11 only:** Fabric 1.20.1 and 1.21.1 (since alpha.1), NeoForge 1.21.1 (since beta.3), Forge 1.20.1 (since beta.5), and Minecraft 1.21.11 for Fabric and NeoForge (since beta.8)
-- **1.12.2 only:** Forge 1.12.2 (since beta.6); it requires OMLib, and OMLib's wrench configures and dismantles lights
+- __1.20.1/1.21.1/1.21.11 only:__ Fabric 1.20.1 and 1.21.1 (since alpha.1), NeoForge 1.21.1 (since beta.3), Forge 1.20.1 (since beta.5), and Minecraft 1.21.11 for Fabric and NeoForge (since beta.8)
+- __1.12.2 only:__ Forge 1.12.2 (since beta.6); it requires OMLib, and OMLib's wrench configures and dismantles lights
 
 ### Lights
 
@@ -37,8 +37,8 @@ The 1.12.2 version is a port of the 1.20.1/1.21.1/1.21.11 version and has its li
 - Fluorescent and grow lights that sit directly next to each other and face the same way share their energy: cables fill the whole group, and a light that runs low takes energy from its neighbours
 - Lightproof glass: see-through glass that lets no light through and stops floodlight beams (placeholder texture), crafted from black stained glass and coal; connected textures with an OptiFine-compatible CTM mod (on 1.20.1/1.21.1/1.21.11 e.g. Continuity)
 - Disguise for the electric, carbon and UV floodlights: the light looks like a full, opaque block, with only its lamp showing on the front; the disguise stays on the dropped light
-- **1.12.2 only:** the disguise is set in OMLib's camouflage menu (Camouflage button in the light's GUI), like OMT's turret bases and OMPD's camouflage trap; disguises from 1.0.0-beta.6, which had a slot in the GUI, are kept
-- **1.20.1/1.21.1/1.21.11 only:** the disguise is set in a slot of the light's GUI
+- __1.12.2 only:__ the disguise is set in OMLib's camouflage menu (Camouflage button in the light's GUI), like OMT's turret bases and OMPD's camouflage trap; disguises from 1.0.0-beta.6, which had a slot in the GUI, are kept
+- __1.20.1/1.21.1/1.21.11 only:__ the disguise is set in a slot of the light's GUI
 
 ### Items, GUI and config
 
@@ -47,14 +47,14 @@ The 1.12.2 version is a port of the 1.20.1/1.21.1/1.21.11 version and has its li
 - Light debug tool: while held, light blocks are shown as wireframes (yellow phantom lights, magenta UV lights)
 - A "?" in the electric and carbon floodlight GUIs explains the delay before a light can turn back on; toggling invert on a light that is still in that delay tells you in chat how many seconds until it turns on
 - Config file `config/openmodularlighting.json` with the 1.7.10 settings, documented in the file and synced from the server on join
-- **1.20.1/1.21.1/1.21.11 only:** the config file has a version: config files from older versions get the new default energy use and grow chance, unless the value was changed by hand
+- __1.20.1/1.21.1/1.21.11 only:__ the config file has a version: config files from older versions get the new default energy use and grow chance, unless the value was changed by hand
 
 ### Energy and mod compatibility
 
-- **1.12.2 only:** Forge Energy and item pipes
-- **1.12.2 only:** Hwyla shows invert and mode of a light (switchable in Hwyla's config)
-- **1.20.1/1.21.1/1.21.11 only:** Team Reborn Energy on Fabric, the loader's energy capability (FE) and item handlers on NeoForge and Forge
-- **1.20.1/1.21.1/1.21.11 only:** Jade shows invert and mode of a light (optional, Jade is not required)
+- __1.12.2 only:__ Forge Energy and item pipes
+- __1.12.2 only:__ Hwyla shows invert and mode of a light (switchable in Hwyla's config)
+- __1.20.1/1.21.1/1.21.11 only:__ Team Reborn Energy on Fabric, the loader's energy capability (FE) and item handlers on NeoForge and Forge
+- __1.20.1/1.21.1/1.21.11 only:__ Jade shows invert and mode of a light (optional, Jade is not required)
 
 ## Changed
 
@@ -68,17 +68,17 @@ Compared with the 1.7.10 _FloodLights_ mod:
 ### Compared with earlier betas
 
 - The jar files are named `openmodularlighting-<version>-mc<minecraft version>-<loader>.jar` (`-mc` instead of the `+` before the Minecraft version), as in the other OpenModularTurretsTeam mods
-- **1.20.1/1.21.1/1.21.11 only:** releases on CurseForge and Modrinth are titled like the jar file
-- **1.20.1/1.21.1/1.21.11 only:** `uvLightRendered` is now each player's own setting: on a server, the client's config decides whether UV light blocks are visible
-- **1.20.1/1.21.1/1.21.11 only:** the floodlight GUIs have a dark grey background like the turret GUIs instead of the vanilla light grey
+- __1.20.1/1.21.1/1.21.11 only:__ releases on CurseForge and Modrinth are titled like the jar file
+- __1.20.1/1.21.1/1.21.11 only:__ `uvLightRendered` is now each player's own setting: on a server, the client's config decides whether UV light blocks are visible
+- __1.20.1/1.21.1/1.21.11 only:__ the floodlight GUIs have a dark grey background like the turret GUIs instead of the vanilla light grey
 
 ## Fixed
 
 - Light bulbs can be crafted when only the grow light is enabled
-- **1.20.1/1.21.1/1.21.11 only:** players in adventure mode can no longer dismantle lights with a wrench
-- **1.20.1/1.21.1/1.21.11 only:** fuels with a huge burn time (modded) no longer get stuck in the carbon floodlight's slot
-- **1.20.1/1.21.1/1.21.11 only:** no crash when rendering a disguised floodlight on Fabric without a renderer implementation (e.g. Sodium without Indium on 1.20.1)
-- **1.20.1/1.21.1/1.21.11 only:** no stray black line below the left corner of the floodlight GUIs
+- __1.20.1/1.21.1/1.21.11 only:__ players in adventure mode can no longer dismantle lights with a wrench
+- __1.20.1/1.21.1/1.21.11 only:__ fuels with a huge burn time (modded) no longer get stuck in the carbon floodlight's slot
+- __1.20.1/1.21.1/1.21.11 only:__ no crash when rendering a disguised floodlight on Fabric without a renderer implementation (e.g. Sodium without Indium on 1.20.1)
+- __1.20.1/1.21.1/1.21.11 only:__ no stray black line below the left corner of the floodlight GUIs
 
 ## Coming in the next pre-release
 
@@ -86,15 +86,15 @@ These changes are done but not released yet.
 
 ### Changed
 
-- **1.12.2 only:** the floodlight GUIs have a dark grey background like the turret GUIs instead of the vanilla light grey (1.20.1/1.21.1/1.21.11 has this since 1.0.0-beta.8)
+- __1.12.2 only:__ the floodlight GUIs have a dark grey background like the turret GUIs instead of the vanilla light grey (1.20.1/1.21.1/1.21.11 has this since 1.0.0-beta.8)
 
 ### Fixed
 
-- **1.12.2 only:** players in adventure mode can no longer dismantle lights with a wrench
-- **1.12.2 only:** fuels with a huge burn time (modded) no longer get stuck in the carbon floodlight's slot
-- **1.12.2 only:** `uvLightRendered` is each player's own setting: on a server, the client's config decides whether UV light blocks are visible
-- **1.12.2 only:** light blocks are only saved when their light sources changed
-- **1.12.2 only:** no stray black line below the left corner of the floodlight GUIs
+- __1.12.2 only:__ players in adventure mode can no longer dismantle lights with a wrench
+- __1.12.2 only:__ fuels with a huge burn time (modded) no longer get stuck in the carbon floodlight's slot
+- __1.12.2 only:__ `uvLightRendered` is each player's own setting: on a server, the client's config decides whether UV light blocks are visible
+- __1.12.2 only:__ light blocks are only saved when their light sources changed
+- __1.12.2 only:__ no stray black line below the left corner of the floodlight GUIs
 
 ## Release history
 
