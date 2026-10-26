@@ -2,29 +2,44 @@ layout: page
 title: curseforge-description-omt
 permalink: /curseforge-description-omt/
 
-![OMT2 Logo](https://media-elerium.cursecdn.com/attachments/23/882/newsplashbnw.PNG)
+# Open Modular Turrets
+
+Build turret bases, mount up to four turrets on them and keep your home safe from mobs and unwanted visitors, whether you're online or offline. Open Modular Turrets has long been a popular choice in PvP modpacks, and it is now available on Fabric for Minecraft 1.20.1, 1.21.1 and 1.21.11, on NeoForge for 1.21.1 and 1.21.11, and on Forge for 1.20.1.
+
+## Features
+
+* **14 turrets**, from the disposable item turret and potato cannon to machine guns, grenade and rocket launchers, lasers, railguns and teleporter turrets
+* **Turret bases in 5 tiers** that handle targeting, ammo and energy for every turret mounted on them
+* **Choose your targets:** hostile mobs, neutral mobs, players, or any combination
+* **Trusted players**, so friends can use your base without being shot
+* **Upgrades and addons:** range, fire rate, accuracy, efficiency, scattershot, damage amplifier, solar panel, redstone reactor, concealer and more
+* **Passive defenses** from Open Modular Passive Defense: hardened blocks, walls, fences and the camouflage trap
+* **Generator:** burns furnace fuel and powers adjacent turret bases
+* Uses **Team Reborn Energy**, so it works with energy from other Fabric tech mods
+* **Extensive Config**: Customize everything to your needs
 
 ## Important Stuff
 
-__1.20.1__ / __1.21.1__ builds of OMT (Fabric 1.20.1 and 1.21.1, NeoForge 1.21.1, Forge 1.20.1) need no other mod of ours: OMLib is not needed, and Open Modular Passive Defense's blocks are included.
-__1.12.2__ builds of OMT require [OMLib](https://minecraft.curseforge.com/projects/omlib) for 1.12.2 (OMT 4.0.0-beta.3 needs OMLib 4.0.0-beta.3 or newer).
-__1.7.10__, __1.10__ and __1.11__ are __NOT SUPPORTED__ anymore.
+___1.20.1___ / ___1.21.1___ / ___1.21.11___ builds of OMT (Fabric _1.20.1_, _1.21.1_, _1.21.11_, NeoForge _1.21.1_ and _1.21.11_ and Forge _1.20.1_) need no other mod of ours: OMLib is not needed, and Open Modular Passive Defense's blocks are included.
+___1.12.2___ builds of OMT require [OMLib](https://minecraft.curseforge.com/projects/omlib) for 1.12.2 (OMT 4.0.0-beta.3 needs OMLib 4.0.0-beta.3 or newer).
 
-For 1.12.2, Open Modular Passive Defence can be found [here](https://minecraft.curseforge.com/projects/open-modular-passive-defense).
+### Open Modular Lighting
 
-You can join our Discord Server [here](https://discord.gg/SEG695u), please note the pinned messaged in `#news`, we had spammers, so we disabled the permission for new users to write in all channels except `#spam`.
+A port of Keridos' old Floodlights mod plus new features is on _1.12.2_, _1.20.1_, _1.21.1_ and _1.21.11_ on Fabric and (Neo)Forge. It adds floodlights for lighting up huge areas and several smaller and utility lights. [You can find it here](https://www.curseforge.com/minecraft/mc-mods/open-modular-lighting).
 
-Join our discord and request the Tester role by typing "!rr" in `#spam`. We will ping all the signed testers whenever we update our mods. We also have a test server where you can play with prerelease versions to test them.
+### Only the 1.12.2/1.20.1/1.21.1/1.21.11 releases are supported
 
-For __Modpack Creators__: You are free to put this mod and its companion mods in any modpack. It'd be nice of you if you let us know via a small message on curseforge or in our discord.
+For 1.12.2, [Open Modular Passive Defence can be found here](https://minecraft.curseforge.com/projects/open-modular-passive-defense).
 
-Grab the latest stable releases from this project page, and the dev builds from here: [Dev-Builds](https://jenkins.ironhide.de/job/OMTTeam/)
+You can join our [Discord Server here](https://discord.gg/SEG695u).
 
-## News:
+__Modpack Creators__: You are free to put this mod and its companion mods in any modpack. It'd be nice of you if you let us know via a small message on curseforge or in our discord.
 
-### Update 4.0.0 (__in beta__, for _1.12.2_, _1.20.1_ and _1.21.1_)
+## News
 
-- _Add_: 1.20.1 and 1.21.1 versions (Fabric, NeoForge 1.21.1, Forge 1.20.1)
+### Update 4.0.0 (__in beta__, for _1.12.2_, _1.20.1_, _1.21.1_ and _1.21.11_)
+
+- _Add_: 1.20.1, 1.21.1 and 1.21.11 versions (Fabric, NeoForge 1.21.1 and 1.21.11, Forge 1.20.1)
 - _Add_: Generator with Energy Multiplier Upgrades
 - _Add_: camouflage menu with light settings for turret bases and camouflage traps
 - _Add_: memory card that copies the settings of bases and camouflage traps
@@ -37,20 +52,3 @@ Grab the latest stable releases from this project page, and the dev builds from 
 - _Remove_: inventory and power expanders and the loot deleter addon (1.12.2: they disappear from your world, back it up first)
 
 Full changelog: [openmodularturretsteam.github.io/changelog/4.0.0](https://openmodularturretsteam.github.io/changelog/4.0.0/)
-
-### Update 3.1.0 (__released__, only for _1.12.2_)
-
-- _Add_: Turrets honor team settings. (__done__)
-- _Add_: Limits for how many turrets at one base (__done__)
-- _Add_: Mod based recipes for addons/upgrades (__done__)
-- _Add_: Config option for concealment without addon (__done__)
-- _Add_: Upgrades can be configured per turret now (__done__)
-- _Add_: Camo now supports most chisel blocks and even some transparent ones (__done__)
-- _Add_: Higher tier bases can now emit light and be transparent to light (__done__)
-- _Change_: Railgun damage now scales based on targets armor (__done__)
-- _Change_: Railgun rendering update (__done__)
-- _Change_: Small GUI updates (__done__)
-- _Change_: New GUI for trusted players (__done__)
-- _Change_: reworked the trusted player system (__done__)
-- _Change_: new expander textures (by Austin5003) (__done__)
-- _Change_: Laser rework (more realistic effects/behaviour) (__done__)
