@@ -97,13 +97,36 @@ Floodlights, a port of the 1.7.10 _FloodLights_ mod.
 Released as betas: 1.0.0-beta.7 for 1.12.2 (Forge, needs OMLib 4.0.0-beta.2 or newer), 1.0.0-beta.8 for 1.20.1+ (Fabric 1.20.1, 1.21.1 and 1.21.11, NeoForge 1.21.1 and 1.21.11, Forge 1.20.1).
 See the [full 1.0.0 changelog](/changelog/oml-1.0.0/).
 
-- _Add_: electric, carbon (non-electric) and UV floodlights with straight, narrow cone and wide cone beams (**done**)
-- _Add_: fluorescent lights, cube light and grow light, sharing energy with their neighbours (**done**)
-- _Add_: lightproof glass that stops light and floodlight beams (**done**)
-- _Add_: disguise for floodlights (**done**; on 1.12.2 in OMLib's camouflage menu)
+#### Ported from the 1.7.10 _FloodLights_ mod
+
+- _Add_: electric floodlight with straight, narrow cone and wide cone beams, redstone control with invert, dye colours and a battery slot (**done**)
+- _Add_: carbon (non-electric) floodlight burning furnace fuel (**done**)
+- _Add_: UV floodlight that damages living entities (**done**)
+- _Add_: grow light, also with a black-light mode (**done**)
+- _Add_: small and square fluorescent lights (**done**)
+- _Add_: crafting chain for light bulbs, filaments, mantles and lanterns (**done**)
 - _Add_: light debug tool (**done**)
-- _Add_: Jade (1.20.1+) and Hwyla (1.12.2) support (**done**)
-- _Change_: floodlights use fewer light blocks and keep them while off (**done**)
+- _Add_: configurable ranges, energy use, fuel time, grow chance, UV damage and a timeout before a light turns on again (**done**)
+
+#### Added since
+
+- _Add_: cube light, a full block that lights all 6 neighbouring blocks (**done**)
+- _Add_: lightproof glass that stops light and floodlight beams (**done**)
+- _Add_: disguise for the electric, carbon and UV floodlights, so they look like any full block (**done**; on 1.12.2 in OMLib's camouflage menu)
+- _Add_: neighbouring fluorescent and grow lights and touching cube lights share their energy (**done**)
+- _Add_: hints in the GUI and in chat for the delay before a light turns on again (**done**)
+- _Add_: Fabric, NeoForge and Forge versions for 1.20.1 and 1.21.1, NeoForge and Fabric for 1.21.11, and Forge for 1.12.2 (**done**)
+- _Add_: Jade (1.20.1+) and Hwyla (1.12.2) tooltips showing a light's mode and invert (**done**)
+- _Add_: a documented JSON config that the server sends to the players, and that updates itself to new defaults (**done**)
+
+#### Changed since
+
+- _Change_: floodlights keep their light blocks while off and only switch them, use fewer of them and re-check the beam every 20 seconds (**done**)
+- _Change_: lower default energy use: electric floodlight 10 E/t (20 in the cone modes, was 20 and 40), small fluorescent light 1 E/t (was 2), UV floodlight 60 E/t (was 80), grow light 25 E/t (was 40) (**done**)
+- _Change_: the grow light gives a growth tick with 10 % chance per second (was 5 %) (**done**)
+- _Change_: cube and fluorescent lights turn back on at once, without the 2-second timeout (**done**)
+- _Change_: energy through Team Reborn Energy (Fabric) and Forge Energy instead of the 1.7.10 RF API (**done**)
+- _Change_: the UV light blocks' visibility is each player's own setting (**done**; on 1.12.2 in the next pre-release)
 
 ## __OMTControl (OMT Addon)__
 
