@@ -66,6 +66,7 @@ This keeps markdown linting (MD050) quiet.
 - Dark theme: optional, follows the system setting unless the visitor picks Light or Dark with the "Theme" button in the header (saved in `localStorage`, applied early by `_includes/head.html`).
   The colours are in `assets/main.scss` (`dark-theme` mixin); a new element with its own colours needs a dark variant there.
 - `roadmap.md` and `curseforge-description-omt.md` list the state per version; update them to match the changelogs.
+  The planned versions of OMT (4.1.x, 4.2.x) come from the confirmed issues (label `confirmed`, milestones) of https://github.com/OpenModularTurretsTeam/OpenModularTurrets/issues; link each item to its issue and leave out unconfirmed ones.
   They mark the state as `(__done__)` or `(__WIP__)`.
 
 ## Build

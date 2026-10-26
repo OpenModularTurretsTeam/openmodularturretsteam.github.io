@@ -8,6 +8,48 @@ Here is the state of our mods and the changes planned for them.
 
 ## __OpenModularTurrets__
 
+### _v4.2.x_ (planned)
+
+The targets of 4.1.x and 4.2.x are the issues of the matching milestones in the [issue tracker](https://github.com/OpenModularTurretsTeam/OpenModularTurrets/issues).
+Which Minecraft versions get 4.1.x and 4.2.x is not decided yet.
+
+- _Add_: multiblock bases and their blocks, which replace the upgrades ([#493](https://github.com/OpenModularTurretsTeam/OpenModularTurrets/issues/493)):
+  - basic blocks without a function (maybe basic and advanced)
+  - cooling block (air/fluid cooling) that replaces the fire rate upgrade, and vents as an attachment
+  - power converter block that replaces the efficiency upgrade
+  - targeting systems that replace the accuracy and range upgrades
+  - ammo compressor block that replaces the scattershot upgrade
+  - energy generating blocks, with a rework of the energy generation in bases
+- _Change_: some turrets and addons need a certain size or features of their multiblock base
+- _Add_: a way for mobs to fight turrets, by destroying or deactivating them; only hostile mobs would attack ([#531](https://github.com/OpenModularTurretsTeam/OpenModularTurrets/issues/531))
+- _Change_: concealing a turret without the addon becomes a per-turret setting, e.g. with a GUI button or OMLib's wrench, instead of a global config option ([#458](https://github.com/OpenModularTurretsTeam/OpenModularTurrets/issues/458))
+
+### _v4.1.x_ (planned)
+
+A visual rework of the mod with a clear material and engineering progression, and some changes to addons and blocks.
+
+- _Change_: turret models and textures follow the material progression wood → copper → brass → iron → steel, the swivel holders are remodelled to fit, and every turret gets visual indicators that make it easy to identify at night ([#586](https://github.com/OpenModularTurretsTeam/OpenModularTurrets/issues/586))
+- _Change_: Gun Turret: less military, brass tier, new model ([#579](https://github.com/OpenModularTurretsTeam/OpenModularTurrets/issues/579))
+- _Change_: Grenade Turret: new texture ([#580](https://github.com/OpenModularTurretsTeam/OpenModularTurrets/issues/580))
+- _Change_: Slowing Turret (the former Relativistic Turret): new model and texture ([#581](https://github.com/OpenModularTurretsTeam/OpenModularTurrets/issues/581))
+- _Change_: Rocket Launcher Turret: new model and texture ([#582](https://github.com/OpenModularTurretsTeam/OpenModularTurrets/issues/582))
+- _Change_: Laser Turret: new model and textures, a crystal laser with a big cooling system ([#583](https://github.com/OpenModularTurretsTeam/OpenModularTurrets/issues/583))
+- _Change_: Plasma Turret: fix the coil rendering, new model and texture ([#584](https://github.com/OpenModularTurretsTeam/OpenModularTurrets/issues/584))
+- _Change_: Potato Cannon Turret: a hole in front of the barrel ([#585](https://github.com/OpenModularTurretsTeam/OpenModularTurrets/issues/585))
+- _Change_: the Damage Amp addon is shown as a glowing wavy ring on top of the base plate of the turret ([#587](https://github.com/OpenModularTurretsTeam/OpenModularTurrets/issues/587), with a pull request open: [#591](https://github.com/OpenModularTurretsTeam/OpenModularTurrets/issues/591))
+- _Add_: heat system ([#590](https://github.com/OpenModularTurretsTeam/OpenModularTurrets/issues/590)):
+  - turrets produce heat, some none or only a little, some a lot
+  - bases store heat and turrets cannot shoot while the storage is full
+  - bases lose heat through every free side, and a cooling fan on one side dramatically increases that (the block two blocks from the base on that side must be air)
+  - heat generation of turrets, storage and dissipation of bases and an on/off switch are in the config
+- _Change_: the Solar addon becomes a block with a higher energy output ([#578](https://github.com/OpenModularTurretsTeam/OpenModularTurrets/issues/578))
+- _Change_: more realistic turrets: a configurable range damage falloff (optimal range plus falloff) and tracking limits, so fast spinning railguns no longer make sense ([#539](https://github.com/OpenModularTurretsTeam/OpenModularTurrets/issues/539))
+- _Change_: recipe rework: new intermediate items, the previous tier is removed from the recipes, the cost stays the same and the crafting needs fewer steps ([#595](https://github.com/OpenModularTurretsTeam/OpenModularTurrets/issues/595))
+- _Add_: Repelling Turret (Tier 3) (Entity pushing utility turret) ([#324](https://github.com/OpenModularTurretsTeam/OpenModularTurrets/issues/324))
+- _Add_: Tractor Turret (Tier 3) (Entity pulling utility turret) ([#324](https://github.com/OpenModularTurretsTeam/OpenModularTurrets/issues/324))
+- _Add_: Energy Drain Turret (Tier 5) (Drains energy from the items of its targets) ([#324](https://github.com/OpenModularTurretsTeam/OpenModularTurrets/issues/324))
+- To consider: Particle Beam Turret (Tier 5) (Very high damage, very low firerate, large AOE offensive turret) ([#324](https://github.com/OpenModularTurretsTeam/OpenModularTurrets/issues/324))
+
 ### _v4.0.x_ (in beta, for _1.12.2_, _1.20.1_ and _1.21.1_)
 
 Released as betas: 4.0.0-beta.3 for 1.12.2 (Forge), 4.0.0-beta.9 for 1.20.1 and 1.21.1 (Fabric 1.20.1 and 1.21.1, NeoForge 1.21.1, Forge 1.20.1).
@@ -25,16 +67,10 @@ See the [full 4.0.0 changelog](/changelog/4.0.0/).
 - _Change_: new targeting and aiming system for turrets (__done__)
 - _Change_: Relativistic Turret becomes the Slowing Turret (__done__)
 - _Remove_: inventory and power expanders, loot deleter addon (__done__)
+- _Change_: new texture for the Generator, the current one is a placeholder ([#588](https://github.com/OpenModularTurretsTeam/OpenModularTurrets/issues/588))
 
-### Planned earlier, not part of 4.0.0
+### Not scheduled
 
-These were on the old 4.0 roadmap and did not make it into 4.0.0.
-
-- multiblock bases, with turrets and addons that need a certain size or features of the base
-- replacing the upgrade system with attachments/blocks for turret bases
-- Repelling Turret (Tier 3) (Entity pushing utility turret)
-- Tractor Turret (Tier 3) (Entity pulling utility turret)
-- Particle Beam Turret (Tier 5) (Very high damage, very low firerate, large AOE offensive turret)
 - Securicraft compatibility
 
 ### _v3.1.x_ (released, for _1.12.2_)
