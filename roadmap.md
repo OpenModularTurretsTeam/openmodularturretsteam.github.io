@@ -111,7 +111,8 @@ See the [full 1.0.0 changelog](/changelog/oml-1.0.0/).
 - _Add_: disguise for the electric, carbon and UV floodlights, so they look like any full block (__done__; on 1.12.2 in OMLib's camouflage menu)
 - _Add_: neighbouring fluorescent and grow lights and touching cube lights share their energy (__done__)
 - _Add_: hints in the GUI and in chat for the delay before a light turns on again (__done__)
-- _Add_: Fabric, NeoForge and Forge versions for 1.20.1 and 1.21.1, NeoForge and Fabric for 1.21.11, and Forge for 1.12.2 (__done__)
+- _Add_: Fabric, NeoForge and Forge versions for 1.20.1 and 1.21.1, and a Forge version for 1.12.2 (__done__)
+- _Add_: port to Minecraft 1.21.11, for both Fabric and NeoForge (__done__)
 - _Add_: Jade (1.20.1+) and Hwyla (1.12.2) tooltips showing a light's mode and invert (__done__)
 - _Add_: a documented JSON config that the server sends to the players, and that updates itself to new defaults (__done__)
 
