@@ -39,17 +39,17 @@ You can join our [Discord Server here](https://discord.gg/SEG695u).
 
 ### Update 4.0.0 (**in beta**, for _1.12.2_, _1.20.1_, _1.21.1_ and _1.21.11_)
 
-- _Add_: 1.20.1, 1.21.1 and 1.21.11 versions (Fabric, NeoForge 1.21.1 and 1.21.11, Forge 1.20.1)
-- _Add_: Generator with Energy Multiplier Upgrades
-- _Add_: camouflage menu with light settings for turret bases and camouflage traps
-- _Add_: memory card that copies the settings of bases and camouflage traps
-- _Add_: trusted players for camouflage traps
-- _Add_: Turret API for other mods
-- _Add_: Jade tooltips and Sable/Create contraption support (1.20.1 and 1.21.1)
-- _Add_: claiming blocks without an owner and an Ownership Wand for mapmakers
-- _Change_: new targeting and aiming system for turrets
-- _Change_: the Relativistic Turret is now the Slowing Turret
-- _Add_: new inventory expanders that let the ammo and fuel slots of bases and generators hold more stacks
-- _Remove_: the old inventory and power expanders and the loot deleter addon (1.12.2: they disappear from your world, back it up first)
+* _Add_: 1.20.1, 1.21.1 and 1.21.11 versions (Fabric, NeoForge 1.21.1 and 1.21.11, Forge 1.20.1)
+* _Add_: Generator with Energy Multiplier Upgrades
+* _Add_: camouflage menu with light settings for turret bases and camouflage traps
+* _Add_: memory card that copies the settings of bases and camouflage traps
+* _Add_: trusted players for camouflage traps
+* _Add_: Turret API for other mods
+* _Add_: Jade tooltips and Sable/Create contraption support (1.20.1 and 1.21.1)
+* _Add_: claiming blocks without an owner and an Ownership Wand for mapmakers
+* _Add_: new inventory expanders that let the ammo and fuel slots of bases and generators hold more stacks
+* _Change_: new targeting and aiming system for turrets
+* _Change_: the Relativistic Turret is now the Slowing Turret
+* _Remove_: the old inventory and power expanders and the loot deleter addon (1.12.2: they disappear from your world, back it up first)
 
 Full changelog: [openmodularturretsteam.github.io/changelog/4.0.0](https://openmodularturretsteam.github.io/changelog/4.0.0/)
