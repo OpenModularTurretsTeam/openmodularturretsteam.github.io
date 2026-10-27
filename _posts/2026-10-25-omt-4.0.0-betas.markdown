@@ -8,20 +8,20 @@ Hello everyone,
 <br>
 Open Modular Turrets 4.0.0 is in beta, for Minecraft 1.12.2 and, for the first time, for modern Minecraft:
 
-- __1.20.1 and 1.21.1__: 4.0.0-beta.9 for Fabric 1.20.1 and 1.21.1, NeoForge 1.21.1 and Forge 1.20.1.
+- **1.20.1 and 1.21.1**: 4.0.0-beta.9 for Fabric 1.20.1 and 1.21.1, NeoForge 1.21.1 and Forge 1.20.1.
   Open Modular Passive Defense's hardened blocks, walls, fences and the camouflage trap are part of the mod, and OMLib is not needed.
-- __1.12.2__: 4.0.0-beta.1 of OMT, OMLib and OMPD (Forge).
+- **1.12.2**: 4.0.0-beta.1 of OMT, OMLib and OMPD (Forge).
   OMT and OMPD need OMLib 4.0.0-beta.1 or newer.
 
 The highlights:
 
-- __Generator__: burns furnace fuel into energy for your turret bases, with Energy Multiplier Upgrades
-- __Camouflage menu__ for turret bases and camouflage traps, with light sliders on tier 4 and 5 bases and the trap
-- __Memory card__ that copies a base's or trap's targeting, trust list, disguise and light settings
-- __Trusted players for camouflage traps__
-- __Reworked targeting and aiming__: projectile turrets lead their targets and no longer shoot into their own base
-- __Melee Turret__ with a model, and __Slowing Turret__ as the new name of the Relativistic Turret
-- __Turret API__, so other mods can add their own turrets
+- **Generator**: burns furnace fuel into energy for your turret bases, with Energy Multiplier Upgrades
+- **Camouflage menu** for turret bases and camouflage traps, with light sliders on tier 4 and 5 bases and the trap
+- **Memory card** that copies a base's or trap's targeting, trust list, disguise and light settings
+- **Trusted players for camouflage traps**
+- **Reworked targeting and aiming**: projectile turrets lead their targets and no longer shoot into their own base
+- **Melee Turret** with a model, and **Slowing Turret** as the new name of the Relativistic Turret
+- **Turret API**, so other mods can add their own turrets
 - On 1.20.1 and 1.21.1: Jade tooltips, turrets on Sable and Create contraptions, claiming blocks without an owner, and an Ownership Wand for mapmakers
 
 4.0.0 also removes some things on 1.12.2: inventory and power expanders, the loot deleter addon and OMLib's network cable disappear from your world, the expanders together with the items in them.
@@ -30,7 +30,7 @@ Back up your world before you update.
 The full changelog, merged from all alphas and betas of both versions, is [here](/changelog/4.0.0/).
 The roadmap is updated too, see [here](/roadmap/).
 
-Our floodlight mod __Open Modular Lighting__ is in beta too: 1.0.0-beta.5 for 1.20.1 and 1.21.1 (Fabric 1.20.1 and 1.21.1, NeoForge 1.21.1, Forge 1.20.1) and 1.0.0-beta.6 for 1.12.2 (Forge, with OMLib).
+Our floodlight mod **Open Modular Lighting** is in beta too: 1.0.0-beta.5 for 1.20.1 and 1.21.1 (Fabric 1.20.1 and 1.21.1, NeoForge 1.21.1, Forge 1.20.1) and 1.0.0-beta.6 for 1.12.2 (Forge, with OMLib).
 It has electric, carbon and UV floodlights, fluorescent, cube and grow lights, lightproof glass, and floodlights you can disguise as other blocks.
 Its full changelog is [here](/changelog/oml-1.0.0/).
 

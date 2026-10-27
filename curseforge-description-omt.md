@@ -20,8 +20,8 @@ Build turret bases, mount up to four turrets on them and keep your home safe fro
 
 ## Important Stuff
 
-___1.20.1___ / ___1.21.1___ / ___1.21.11___ builds of OMT (Fabric _1.20.1_, _1.21.1_, _1.21.11_, NeoForge _1.21.1_ and _1.21.11_ and Forge _1.20.1_) need no other mod of ours: OMLib is not needed, and Open Modular Passive Defense's blocks are included.
-___1.12.2___ builds of OMT require [OMLib](https://minecraft.curseforge.com/projects/omlib) for 1.12.2 (OMT 4.0.0-beta.3 needs OMLib 4.0.0-beta.3 or newer).
+_**1.20.1**_ / _**1.21.1**_ / _**1.21.11**_ builds of OMT (Fabric _1.20.1_, _1.21.1_, _1.21.11_, NeoForge _1.21.1_ and _1.21.11_ and Forge _1.20.1_) need no other mod of ours: OMLib is bundled, and Open Modular Passive Defense's blocks are included.
+_**1.12.2**_ builds of OMT require [OMLib](https://minecraft.curseforge.com/projects/omlib) for 1.12.2 (OMT 4.0.0-beta.5 needs OMLib 4.0.0-beta.5 or newer).
 
 ### Open Modular Lighting
 
@@ -33,11 +33,11 @@ For 1.12.2, [Open Modular Passive Defence can be found here](https://minecraft.c
 
 You can join our [Discord Server here](https://discord.gg/SEG695u).
 
-__Modpack Creators__: You are free to put this mod and its companion mods in any modpack. It'd be nice of you if you let us know via a small message on curseforge or in our discord.
+**Modpack Creators**: You are free to put this mod and its companion mods in any modpack. It'd be nice of you if you let us know via a small message on curseforge or in our discord.
 
 ## News
 
-### Update 4.0.0 (__in beta__, for _1.12.2_, _1.20.1_, _1.21.1_ and _1.21.11_)
+### Update 4.0.0 (**in beta**, for _1.12.2_, _1.20.1_, _1.21.1_ and _1.21.11_)
 
 - _Add_: 1.20.1, 1.21.1 and 1.21.11 versions (Fabric, NeoForge 1.21.1 and 1.21.11, Forge 1.20.1)
 - _Add_: Generator with Energy Multiplier Upgrades
@@ -49,6 +49,7 @@ __Modpack Creators__: You are free to put this mod and its companion mods in any
 - _Add_: claiming blocks without an owner and an Ownership Wand for mapmakers
 - _Change_: new targeting and aiming system for turrets
 - _Change_: the Relativistic Turret is now the Slowing Turret
-- _Remove_: inventory and power expanders and the loot deleter addon (1.12.2: they disappear from your world, back it up first)
+- _Add_: new inventory expanders that let the ammo and fuel slots of bases and generators hold more stacks
+- _Remove_: the old inventory and power expanders and the loot deleter addon (1.12.2: they disappear from your world, back it up first)
 
 Full changelog: [openmodularturretsteam.github.io/changelog/4.0.0](https://openmodularturretsteam.github.io/changelog/4.0.0/)
