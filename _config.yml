@@ -26,6 +26,11 @@ header_menu:
   - title: Changelogs
     pages:
       - changelog-4.0.0.md
+      - changelog-omt-1.12.2.md
+      - changelog-omt-1.20.1-1.21.1-1.21.11.md
+      - changelog-omlib-1.12.2.md
+      - changelog-omlib-1.20.1-1.21.1-1.21.11.md
+      - changelog-ompd-1.12.2.md
       - changelog-oml-1.0.0.md
   - roadmap.md
 

@@ -11,7 +11,7 @@ The current pre-releases are:
 
 | Minecraft | Loaders | Requires | Latest |
 | --- | --- | --- | --- |
-| 1.12.2 | Forge | OMLib 4.0.0-beta.4 or newer | 1.0.0-beta.8 (2026-10-27) |
+| 1.12.2 | Forge | OMLib 4.0.0-beta.6 or newer | 1.0.0-beta.9 (2026-10-29) |
 | 1.20.1, 1.21.1 and 1.21.11 | Fabric 1.20.1, 1.21.1 and 1.21.11, NeoForge 1.21.1 and 1.21.11, Forge 1.20.1 | Fabric API on Fabric (OMLib is bundled) | 1.0.0-beta.10 (2026-10-27) |
 
 **How to read this page:**
@@ -38,6 +38,8 @@ The 1.12.2 version is a port of the 1.20.1/1.21.1/1.21.11 version and has its li
 - Lightproof glass: see-through glass that lets no light through and stops floodlight beams (placeholder texture), crafted from black stained glass and coal; connected textures with an OptiFine-compatible CTM mod (on 1.20.1/1.21.1/1.21.11 e.g. Continuity)
 - Disguise for the electric, carbon and UV floodlights: the light looks like a full, opaque block, with only its lamp showing on the front; the disguise stays on the dropped light
 - The disguise is set in a camouflage menu, opened with the Camouflage button in the light's GUI: the same screen as for the turret bases of Open Modular Turrets (OMLib's camouflage menu on 1.12.2)
+- The camouflage menu has a Back button to the light's GUI, and says in its slot tooltip and when a block is refused that only full, opaque blocks work
+- Fluorescent lights can be mined with any pickaxe
 - **1.12.2 only:** disguises from 1.0.0-beta.6, which had a slot in the GUI, are kept
 
 ### Items, GUI and config
@@ -81,6 +83,8 @@ Compared with the 1.7.10 _FloodLights_ mod:
 - **1.20.1/1.21.1/1.21.11 only:** no crash when rendering a disguised floodlight on Fabric without a renderer implementation (e.g. Sodium without Indium on 1.20.1)
 - No stray black line below the left corner of the floodlight GUIs
 - **1.12.2 only:** light blocks are only saved when their light sources changed
+- **1.12.2 only:** leaves stopped floodlight beams on servers and with fast graphics; beams pass them now
+- **1.12.2 only:** beams could replace other mods' blocks made of air material; only real air takes light blocks now
 - **1.20.1/1.21.1/1.21.11 only:** dedicated servers with Jade no longer fail to load the floodlight tooltip plugin (an error in the log; on Minecraft 1.21.11 the server crashed)
 - **1.20.1/1.21.1/1.21.11 only:** on Forge 1.20.1, recipes that take iron, gold, redstone or glass panes can be crafted (their common tags were empty on Forge)
 
@@ -97,7 +101,7 @@ Compared with the 1.7.10 _FloodLights_ mod:
 | 1.0.0-beta.6 | 2026-10-24 | |
 | 1.0.0-beta.7 | 2026-10-26 | |
 | 1.0.0-beta.8 | 2026-10-27 | 2026-10-26 |
-| 1.0.0-beta.9 | | 2026-10-27 |
+| 1.0.0-beta.9 | 2026-10-29 | 2026-10-27 |
 | 1.0.0-beta.10 | | 2026-10-27 |
 
 The changelogs of the single releases are in the mod's repository:

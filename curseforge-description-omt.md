@@ -21,7 +21,7 @@ Build turret bases, mount up to four turrets on them and keep your home safe fro
 ## Important Stuff
 
 _**1.20.1**_ / _**1.21.1**_ / _**1.21.11**_ builds of OMT (Fabric _1.20.1_, _1.21.1_, _1.21.11_, NeoForge _1.21.1_ and _1.21.11_ and Forge _1.20.1_) need no other mod of ours: OMLib is bundled, and Open Modular Passive Defense's blocks are included.
-_**1.12.2**_ builds of OMT require [OMLib](https://minecraft.curseforge.com/projects/omlib) for 1.12.2 (OMT 4.0.0-beta.5 needs OMLib 4.0.0-beta.5 or newer).
+_**1.12.2**_ builds of OMT require [OMLib](https://minecraft.curseforge.com/projects/omlib) for 1.12.2 (OMT 4.0.0-beta.6 needs OMLib 4.0.0-beta.6 or newer).
 
 ### Open Modular Lighting
 

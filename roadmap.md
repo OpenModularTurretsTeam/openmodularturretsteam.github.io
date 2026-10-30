@@ -52,8 +52,8 @@ A visual rework of the mod with a clear material and engineering progression, an
 
 ### _v4.0.x_ (in beta, for _1.12.2_, _1.20.1_, _1.21.1_ and _1.21.11_)
 
-Released as betas: 4.0.0-beta.5 for 1.12.2 (Forge), 4.0.0-beta.11 for 1.20.1, 1.21.1 and 1.21.11 (Fabric 1.20.1, 1.21.1 and 1.21.11, NeoForge 1.21.1 and 1.21.11, Forge 1.20.1).
-See the [full 4.0.0 changelog](/changelog/4.0.0/).
+Released as betas: 4.0.0-beta.6 for 1.12.2 (Forge), 4.0.0-beta.11 for 1.20.1, 1.21.1 and 1.21.11 (Fabric 1.20.1, 1.21.1 and 1.21.11, NeoForge 1.21.1 and 1.21.11, Forge 1.20.1).
+See the full changelogs for [1.12.2](/changelog/omt/1.12.2/) and for [1.20.1, 1.21.1 and 1.21.11](/changelog/omt/1.20.1-1.21.1-1.21.11/).
 
 - _Add_: 1.20.1, 1.21.1 and 1.21.11 versions (Fabric, NeoForge 1.21.1 and 1.21.11, Forge 1.20.1), with OMPD's blocks included and OMLib bundled (**done**)
 - _Add_: Generator with Energy Multiplier Upgrades (**done**)
@@ -68,7 +68,7 @@ See the [full 4.0.0 changelog](/changelog/4.0.0/).
 - _Change_: Relativistic Turret becomes the Slowing Turret (**done**)
 - _Add_: new inventory expanders (tiers 1–3) that let the ammo and fuel slots hold more stacks, and bases with more energy storage and ammo stacks (**done**)
 - _Remove_: the 3.x inventory and power expanders, loot deleter addon (**done**)
-- _Change_: new texture for the Generator, the current one is a placeholder ([#588](https://github.com/OpenModularTurretsTeam/OpenModularTurrets/issues/588))
+- _Change_: new texture for the Generator, the current one is a placeholder (**done** on 1.12.2, in the next pre-release on 1.20.1, 1.21.1 and 1.21.11; [#588](https://github.com/OpenModularTurretsTeam/OpenModularTurrets/issues/588))
 
 ### Not scheduled
 
@@ -97,6 +97,8 @@ On 1.12.2, OMLib is a separate mod. On 1.20.1, 1.21.1 and 1.21.11 it is a librar
 
 ### _v4.0.x_ (in beta)
 
+See the full changelogs for [1.12.2](/changelog/omlib/1.12.2/) and for [1.20.1, 1.21.1 and 1.21.11](/changelog/omlib/1.20.1-1.21.1-1.21.11/).
+
 - _Add_: camouflage menu with disguise slot and light sliders (**done**)
 - _Add_: memory card rules shared by turret bases and camouflage traps (**done**)
 - _Add_: claiming unowned blocks and the Ownership Wand (**done**)
@@ -117,6 +119,8 @@ On 1.20.1, 1.21.1 and 1.21.11, its blocks are part of Open Modular Turrets.
 
 ### _v4.0.x_ (in beta, for _1.12.2_)
 
+See the [full changelog](/changelog/ompd/1.12.2/).
+
 - _Add_: trusted players for camouflage traps (**done**)
 - _Add_: light settings for camouflage traps (**done**)
 - _Add_: claiming unowned blocks and disowning camouflage traps (**done**)
@@ -128,7 +132,7 @@ On 1.20.1, 1.21.1 and 1.21.11, its blocks are part of Open Modular Turrets.
 ### _v1.0.x_ (in beta, for _1.12.2_, _1.20.1_, _1.21.1_ and _1.21.11_)
 
 Floodlights, a port of the 1.7.10 _FloodLights_ mod.
-Released as betas: 1.0.0-beta.8 for 1.12.2 (Forge, needs OMLib 4.0.0-beta.4 or newer), 1.0.0-beta.10 for 1.20.1, 1.21.1 and 1.21.11 (Fabric 1.20.1, 1.21.1 and 1.21.11, NeoForge 1.21.1 and 1.21.11, Forge 1.20.1).
+Released as betas: 1.0.0-beta.9 for 1.12.2 (Forge, needs OMLib 4.0.0-beta.6 or newer), 1.0.0-beta.10 for 1.20.1, 1.21.1 and 1.21.11 (Fabric 1.20.1, 1.21.1 and 1.21.11, NeoForge 1.21.1 and 1.21.11, Forge 1.20.1).
 See the [full 1.0.0 changelog](/changelog/oml-1.0.0/).
 
 #### Ported from the 1.7.10 _FloodLights_ mod
