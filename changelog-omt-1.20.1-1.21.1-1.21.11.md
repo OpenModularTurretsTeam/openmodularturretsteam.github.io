@@ -7,7 +7,7 @@ permalink: /changelog/omt/1.20.1-1.21.1-1.21.11/
 This is the full changelog of **Open Modular Turrets 4.0.0 for Minecraft 1.20.1, 1.21.1 and 1.21.11** (Fabric 1.20.1, 1.21.1 and 1.21.11, NeoForge 1.21.1 and 1.21.11, Forge 1.20.1), merged from all of its alpha and beta releases.
 Open Modular Passive Defense's hardened blocks, walls, fences and the camouflage trap are part of the mod, and it bundles OMLib (since 4.0.0-beta.10), so there is nothing else to install.
 
-The latest pre-release is **4.0.0-beta.11** (2026-10-27).
+The latest release is **4.0.0** (2026-11-03).
 
 Other changelogs: [OMT on 1.12.2](/changelog/omt/1.12.2/), [OMLib on 1.12.2](/changelog/omlib/1.12.2/), [OMLib on 1.20.1/1.21.1/1.21.11](/changelog/omlib/1.20.1-1.21.1-1.21.11/), [OMPD on 1.12.2](/changelog/ompd/1.12.2/), [Open Modular Lighting 1.0.0](/changelog/oml-1.0.0/).
 
@@ -30,6 +30,7 @@ Other changelogs: [OMT on 1.12.2](/changelog/omt/1.12.2/), [OMLib on 1.12.2](/ch
 - Turret tooltips (with shift): what the turret does, the base tier it needs, its ammo and its energy per shot
 - Crafting recipes for the Melee, Crossbow, Arc and Plasma Turrets
 - The Potato Cannon Turret can also fire poisonous potatoes
+- The slowing and railgun turrets show ambient dust particles again (light grey; blue while the railgun is deployed)
 
 ### Turret bases, energy and upgrades
 
@@ -104,6 +105,7 @@ Other changelogs: [OMT on 1.12.2](/changelog/omt/1.12.2/), [OMLib on 1.12.2](/ch
 - Turrets can be attached to a turret base without an owner only by players who may use command blocks (operators, mapmakers)
 - The generator GUI labels are black like in the other turret GUIs (they were dark grey on the dark background)
 - Turret bases store more energy by default: 5,000 / 500,000 / 1,500,000 / 10,000,000 / 100,000,000 for tiers 1–5 (`baseMaxCharge`); config files that still have the old defaults get the new ones
+- New generator textures: every side has its own texture, and the tubes on the sides of a running generator are animated
 - Tier 4 and 5 turret bases hold 2 stacks in each ammo slot, which also doubles what inventory expanders add (`baseAmmoStacks` per tier)
 
 ### Camouflage and passive defense
@@ -144,32 +146,18 @@ Other changelogs: [OMT on 1.12.2](/changelog/omt/1.12.2/), [OMLib on 1.12.2](/ch
 - The info panel left of the base GUI no longer disappears while a button tooltip is shown (Minecraft 1.21.11)
 - The mouse stays where it was when you move between the base, configure, trusted players and camouflage GUIs instead of jumping to the screen centre
 - The grenade turret's grenades properly fall down after hitting a target again
+- The Jade tooltip of a turret showed its inaccuracy labelled as "Accuracy"; it is labelled "Inaccuracy" now
+- The memory card tooltip showed raw translation keys instead of the access levels of the trusted players
+- NeoForge and Forge, with Open Modular Lighting installed: its floodlights could lose their dye colour
+- Fabric: each jar only loads on its own Minecraft version (1.20.1, 1.21.1 or 1.21.11), as on NeoForge and Forge
 - Dedicated servers with Jade no longer fail to load the turret tooltip plugin (an error in the log; on Minecraft 1.21.11 the server crashed)
 - On Forge 1.20.1, recipes that take iron, gold, redstone, quartz, diamonds or glass panes can be crafted (their common tags were empty on Forge)
 
 ## For mod and addon developers
 
 - Turret API: other mods can add turrets with their own weapons, ammo and models, and custom logic: self-targeting weapons find their own targets, projectile and ray weapons can run code when they hit an entity, and `OMTApi.canDamage` / `OMTApi.hurt` apply the base's trust and damage rules; plugins are marked with `@OMTPlugin.Register` / `@OMTClientPlugin.Register`. See `docs/turret-api.md` in the mod's repository
-- Added turrets get their config entries under `turrets.addon_turrets`; on Fabric, plugins use the `openmodularturrets` entrypoint instead of the annotations
-
-## Coming in the next pre-release
-
-These changes are done but not released yet.
-
-### Added
-
-- Config sections `upgrades` and `addons` switch each upgrade and addon off: it loses its recipe and does nothing in a machine, which shows it with a red slot frame, a "no" symbol over the icon and a red tooltip line
-- The slowing and railgun turrets show ambient dust particles again (light grey; blue while the railgun is deployed)
 - Turret API: `TurretDefinition.builder(...).ambientEffect(...)` adds client particles to a placed turret
-
-### Changed
-
-- New generator textures: every side has its own texture, and the tubes on the sides of a running generator are animated
-
-### Fixed
-
-- The Jade tooltip of a turret showed its inaccuracy labelled as "Accuracy"; it is labelled "Inaccuracy" now
-- The memory card tooltip showed raw translation keys instead of the access levels of the trusted players
+- Added turrets get their config entries under `turrets.addon_turrets`; on Fabric, plugins use the `openmodularturrets` entrypoint instead of the annotations
 
 ## Release history
 
@@ -190,5 +178,6 @@ These changes are done but not released yet.
 | 4.0.0-beta.9 | 2026-10-25 |
 | 4.0.0-beta.10 | 2026-10-27 |
 | 4.0.0-beta.11 | 2026-10-27 |
+| 4.0.0 | 2026-11-03 |
 
 The changelogs of the single releases are in the mod's repository: [OpenModularTurrets 1.20.1/1.21.1/1.21.11](https://github.com/OpenModularTurretsTeam/OpenModularTurrets/blob/1.20.1%2B/CHANGELOG.md).

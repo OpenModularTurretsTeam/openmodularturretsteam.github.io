@@ -7,7 +7,7 @@ permalink: /changelog/ompd/1.12.2/
 This is the full changelog of **Open Modular Passive Defense (OMPD) 4.0.0 for Minecraft 1.12.2** (Forge): hardened blocks, walls, fences and the camouflage trap, merged from all of its alpha and beta releases.
 It requires OMLib; on 1.20.1, 1.21.1 and 1.21.11 its blocks are part of [Open Modular Turrets](/changelog/omt/1.20.1-1.21.1-1.21.11/).
 
-The latest pre-release is **4.0.0-beta.6** (2026-10-29), which requires OMLib 4.0.0-beta.6 or newer.
+The latest release is **4.0.0** (2026-11-02), which requires OMLib 4.0.0 or newer.
 
 Other changelogs: [OMT on 1.12.2](/changelog/omt/1.12.2/), [OMT on 1.20.1/1.21.1/1.21.11](/changelog/omt/1.20.1-1.21.1-1.21.11/), [OMLib on 1.12.2](/changelog/omlib/1.12.2/), [OMLib on 1.20.1/1.21.1/1.21.11](/changelog/omlib/1.20.1-1.21.1-1.21.11/), [Open Modular Lighting 1.0.0](/changelog/oml-1.0.0/).
 
@@ -56,5 +56,6 @@ Other changelogs: [OMT on 1.12.2](/changelog/omt/1.12.2/), [OMT on 1.20.1/1.21.1
 | 4.0.0-beta.4 | 2026-10-27 |
 | 4.0.0-beta.5 | 2026-10-27 |
 | 4.0.0-beta.6 | 2026-10-29 |
+| 4.0.0 | 2026-11-02 |
 
 The changelogs of the single releases are in the mod's repository: [OpenModularPassiveDefense 1.12.2](https://github.com/OpenModularTurretsTeam/OpenModularPassiveDefense/blob/1.12/CHANGELOG.md).

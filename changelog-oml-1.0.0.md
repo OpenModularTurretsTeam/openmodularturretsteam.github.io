@@ -7,12 +7,12 @@ permalink: /changelog/oml-1.0.0/
 This is the full changelog of **Open Modular Lighting (OML) 1.0.0**, merged from all of its alpha and beta releases.
 OML brings floodlights, a port of the 1.7.10 mod _FloodLights_, to 1.12.2, 1.20.1, 1.21.1 and 1.21.11.
 
-The current pre-releases are:
+The current releases are:
 
 | Minecraft | Loaders | Requires | Latest |
 | --- | --- | --- | --- |
-| 1.12.2 | Forge | OMLib 4.0.0-beta.6 or newer | 1.0.0-beta.9 (2026-10-29) |
-| 1.20.1, 1.21.1 and 1.21.11 | Fabric 1.20.1, 1.21.1 and 1.21.11, NeoForge 1.21.1 and 1.21.11, Forge 1.20.1 | Fabric API on Fabric (OMLib is bundled) | 1.0.0-beta.10 (2026-10-27) |
+| 1.12.2 | Forge | OMLib 4.0.0 or newer | 1.0.0 (2026-11-02) |
+| 1.20.1, 1.21.1 and 1.21.11 | Fabric 1.20.1, 1.21.1 and 1.21.11, NeoForge 1.21.1 and 1.21.11, Forge 1.20.1 | Fabric API on Fabric (OMLib is bundled) | 1.0.0 (2026-11-03) |
 
 **How to read this page:**
 a line without a prefix applies to both versions.
@@ -78,6 +78,17 @@ Compared with the 1.7.10 _FloodLights_ mod:
 ## Fixed
 
 - Light bulbs can be crafted when only the grow light is enabled
+- The grow light no longer grows its crop the moment it is placed or loaded (with a growth chance of 0 it now never grows)
+- A floodlight right behind a block lights up as soon as that block is removed, instead of after up to 30 seconds
+- Phantom light blocks whose lit state was changed by a command go back to matching their floodlights
+- UV light left behind by a UV floodlight removed or replaced with /setblock, /fill or /clone no longer hurts and removes itself
+- Floodlights copied with their data (/clone, structures) cast their own beam at once
+- **1.20.1/1.21.1/1.21.11 only:** floodlights turned without being replaced (debug stick) cast their own beam at once
+- Floodlights and fluorescent lights in rotated or mirrored structures turn with them
+- The wide cone lights at least one block when the cone range is set below 4
+- The grow light's GUI explains the wait after turning off, like the floodlights' GUIs
+- The carbon floodlight's GUI no longer shows no time left in a cone mode with fuels of enormous burn time
+- Missing translations: the death message of a mob killed by UV light while fighting a player, the "Configured" tooltip in Russian and, on 1.12.2, the names of the phantom and UV light blocks in German and Russian
 - Players in adventure mode can no longer dismantle lights with a wrench
 - Fuels with a huge burn time (modded) no longer get stuck in the carbon floodlight's slot
 - **1.20.1/1.21.1/1.21.11 only:** no crash when rendering a disguised floodlight on Fabric without a renderer implementation (e.g. Sodium without Indium on 1.20.1)
@@ -86,6 +97,8 @@ Compared with the 1.7.10 _FloodLights_ mod:
 - **1.12.2 only:** leaves stopped floodlight beams on servers and with fast graphics; beams pass them now
 - **1.12.2 only:** beams could replace other mods' blocks made of air material; only real air takes light blocks now
 - **1.20.1/1.21.1/1.21.11 only:** dedicated servers with Jade no longer fail to load the floodlight tooltip plugin (an error in the log; on Minecraft 1.21.11 the server crashed)
+- **1.20.1/1.21.1/1.21.11 only:** on Fabric, each jar only loads on its own Minecraft version (1.20.1, 1.21.1 or 1.21.11), as on NeoForge and Forge
+- **1.20.1/1.21.1/1.21.11 only:** on Fabric with Open Modular Turrets installed, its turret bases and camouflage trap keep their own render layer
 - **1.20.1/1.21.1/1.21.11 only:** on Forge 1.20.1, recipes that take iron, gold, redstone or glass panes can be crafted (their common tags were empty on Forge)
 
 ## Release history
@@ -103,6 +116,7 @@ Compared with the 1.7.10 _FloodLights_ mod:
 | 1.0.0-beta.8 | 2026-10-27 | 2026-10-26 |
 | 1.0.0-beta.9 | 2026-10-29 | 2026-10-27 |
 | 1.0.0-beta.10 | | 2026-10-27 |
+| 1.0.0 | 2026-11-02 | 2026-11-03 |
 
 The changelogs of the single releases are in the mod's repository:
 [OpenModularLighting 1.20.1/1.21.1/1.21.11](https://github.com/OpenModularTurretsTeam/OpenModularLighting/blob/1.20.1%2B/CHANGELOG.md),

@@ -50,9 +50,9 @@ A visual rework of the mod with a clear material and engineering progression, an
 - _Add_: Energy Drain Turret (Tier 5) (Drains energy from the items of its targets) ([#324](https://github.com/OpenModularTurretsTeam/OpenModularTurrets/issues/324))
 - To consider: Particle Beam Turret (Tier 5) (Very high damage, very low firerate, large AOE offensive turret) ([#324](https://github.com/OpenModularTurretsTeam/OpenModularTurrets/issues/324))
 
-### _v4.0.x_ (in beta, for _1.12.2_, _1.20.1_, _1.21.1_ and _1.21.11_)
+### _v4.0.x_ (released, for _1.12.2_, _1.20.1_, _1.21.1_ and _1.21.11_)
 
-Released as betas: 4.0.0-beta.6 for 1.12.2 (Forge), 4.0.0-beta.11 for 1.20.1, 1.21.1 and 1.21.11 (Fabric 1.20.1, 1.21.1 and 1.21.11, NeoForge 1.21.1 and 1.21.11, Forge 1.20.1).
+Released: 4.0.0 for 1.12.2 (Forge, 2026-11-02) and 4.0.0 for 1.20.1, 1.21.1 and 1.21.11 (Fabric 1.20.1, 1.21.1 and 1.21.11, NeoForge 1.21.1 and 1.21.11, Forge 1.20.1).
 See the full changelogs for [1.12.2](/changelog/omt/1.12.2/) and for [1.20.1, 1.21.1 and 1.21.11](/changelog/omt/1.20.1-1.21.1-1.21.11/).
 
 - _Add_: 1.20.1, 1.21.1 and 1.21.11 versions (Fabric, NeoForge 1.21.1 and 1.21.11, Forge 1.20.1), with OMPD's blocks included and OMLib bundled (**done**)
@@ -68,7 +68,7 @@ See the full changelogs for [1.12.2](/changelog/omt/1.12.2/) and for [1.20.1, 1.
 - _Change_: Relativistic Turret becomes the Slowing Turret (**done**)
 - _Add_: new inventory expanders (tiers 1–3) that let the ammo and fuel slots hold more stacks, and bases with more energy storage and ammo stacks (**done**)
 - _Remove_: the 3.x inventory and power expanders, loot deleter addon (**done**)
-- _Change_: new texture for the Generator, the current one is a placeholder (**done** on 1.12.2, in the next pre-release on 1.20.1, 1.21.1 and 1.21.11; [#588](https://github.com/OpenModularTurretsTeam/OpenModularTurrets/issues/588))
+- _Change_: new texture for the Generator, the current one is a placeholder (**done**; [#588](https://github.com/OpenModularTurretsTeam/OpenModularTurrets/issues/588))
 
 ### Not scheduled
 
@@ -95,7 +95,7 @@ See the full changelogs for [1.12.2](/changelog/omt/1.12.2/) and for [1.20.1, 1.
 
 On 1.12.2, OMLib is a separate mod. On 1.20.1, 1.21.1 and 1.21.11 it is a library that Open Modular Turrets and Open Modular Lighting bundle, so there is nothing to install separately.
 
-### _v4.0.x_ (in beta)
+### _v4.0.x_ (released)
 
 See the full changelogs for [1.12.2](/changelog/omlib/1.12.2/) and for [1.20.1, 1.21.1 and 1.21.11](/changelog/omlib/1.20.1-1.21.1-1.21.11/).
 
@@ -117,7 +117,7 @@ See the full changelogs for [1.12.2](/changelog/omlib/1.12.2/) and for [1.20.1, 
 
 On 1.20.1, 1.21.1 and 1.21.11, its blocks are part of Open Modular Turrets.
 
-### _v4.0.x_ (in beta, for _1.12.2_)
+### _v4.0.x_ (released, for _1.12.2_)
 
 See the [full changelog](/changelog/ompd/1.12.2/).
 
@@ -129,10 +129,10 @@ See the [full changelog](/changelog/ompd/1.12.2/).
 
 ## **OpenModularLighting**
 
-### _v1.0.x_ (in beta, for _1.12.2_, _1.20.1_, _1.21.1_ and _1.21.11_)
+### _v1.0.x_ (released, for _1.12.2_, _1.20.1_, _1.21.1_ and _1.21.11_)
 
 Floodlights, a port of the 1.7.10 _FloodLights_ mod.
-Released as betas: 1.0.0-beta.9 for 1.12.2 (Forge, needs OMLib 4.0.0-beta.6 or newer), 1.0.0-beta.10 for 1.20.1, 1.21.1 and 1.21.11 (Fabric 1.20.1, 1.21.1 and 1.21.11, NeoForge 1.21.1 and 1.21.11, Forge 1.20.1).
+Released: 1.0.0 for 1.12.2 (Forge, needs OMLib 4.0.0 or newer, 2026-11-02) and 1.0.0 for 1.20.1, 1.21.1 and 1.21.11 (Fabric 1.20.1, 1.21.1 and 1.21.11, NeoForge 1.21.1 and 1.21.11, Forge 1.20.1).
 See the [full 1.0.0 changelog](/changelog/oml-1.0.0/).
 
 #### Ported from the 1.7.10 _FloodLights_ mod

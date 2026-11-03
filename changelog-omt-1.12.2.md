@@ -7,14 +7,14 @@ permalink: /changelog/omt/1.12.2/
 This is the full changelog of **Open Modular Turrets 4.0.0 for Minecraft 1.12.2** (Forge), merged from all of its alpha and beta releases.
 **OMLib** and **Open Modular Passive Defense (OMPD)** are mods of their own on 1.12.2 and have their own changelogs; the changes that are theirs are listed there.
 
-The latest pre-release is **4.0.0-beta.6** (2026-10-29), which requires OMLib 4.0.0-beta.6 or newer.
+The latest release is **4.0.0** (2026-11-02), which requires OMLib 4.0.0 or newer.
 
 Other changelogs: [OMT on 1.20.1/1.21.1/1.21.11](/changelog/omt/1.20.1-1.21.1-1.21.11/), [OMLib on 1.12.2](/changelog/omlib/1.12.2/), [OMLib on 1.20.1/1.21.1/1.21.11](/changelog/omlib/1.20.1-1.21.1-1.21.11/), [OMPD on 1.12.2](/changelog/ompd/1.12.2/), [Open Modular Lighting 1.0.0](/changelog/oml-1.0.0/).
 
 ## Before you update
 
-- OMT and OMPD 4.0.0-beta.6 require OMLib 4.0.0-beta.6 or newer
-- The 3.x inventory and power expanders, the loot deleter addon and _OMLib_'s network cable disappear from your world, the expanders together with the items in them (new inventory expanders come with 4.0.0-beta.5, see Added); placed 3.x power generators become generators and keep their fuel
+- OMT and OMPD 4.0.0 require OMLib 4.0.0 or newer
+- The 3.x inventory and power expanders, the loot deleter addon and _OMLib_'s network cable disappear from your world, the expanders together with the items in them (new inventory expanders come with 4.0.0, see Added); placed 3.x power generators become generators and keep their fuel
 - The Relativistic Turret becomes the Slowing Turret; placed turrets, items and its config section are converted
 
 ## Added
@@ -187,18 +187,6 @@ Other changelogs: [OMT on 1.20.1/1.21.1/1.21.11](/changelog/omt/1.20.1-1.21.1-1.
 - Removed the base controller API (`IBaseController`, `ILaserController`) of the discontinued OMTControl addon
 - Removed the entity and ammo lists of the 3.x API (`api.lists`); they no longer affected targeting (the config lists and the disposable ammo allow list stay)
 
-## Coming in the next pre-release
-
-These changes are done but not released yet.
-
-### Added
-
-- Config sections `upgrades` and `addons` switch each upgrade and addon off: it loses its recipe and does nothing in a machine, which shows it with a red slot frame, a "no" symbol over the icon and a red tooltip line
-
-### Changed
-
-- The potentia converter addon is no longer in the creative tab and JEI: it does nothing and has no recipe
-
 ## Release history
 
 | Version | Released |
@@ -211,5 +199,6 @@ These changes are done but not released yet.
 | 4.0.0-beta.4 | 2026-10-27 |
 | 4.0.0-beta.5 | 2026-10-27 |
 | 4.0.0-beta.6 | 2026-10-29 |
+| 4.0.0 | 2026-11-02 |
 
 The changelogs of the single releases are in the mod's repository: [OpenModularTurrets 1.12.2](https://github.com/OpenModularTurretsTeam/OpenModularTurrets/blob/1.12/CHANGELOG.md).
